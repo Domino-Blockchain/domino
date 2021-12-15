@@ -1,0 +1,29 @@
+[package]
+name = "domino-bucket-map"
+version = "1.10.0"
+description = "domino-bucket-map"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-bucket-map"
+readme = "../README.md"
+repository = "https://github.com/domino-labs/domino"
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+license = "Apache-2.0"
+edition = "2021"
+
+[dependencies]
+rayon = "1.5.0"
+domino-logger = { path = "../logger", version = "=1.10.0" }
+domino-sdk = { path = "../sdk", version = "=1.10.0" }
+memmap2 = "0.5.0"
+log = { version = "0.4.11" }
+domino-measure = { path = "../measure", version = "=1.10.0" }
+rand = "0.7.0"
+fs_extra = "1.2.0"
+tempfile = "3.2.0"
+
+[lib]
+crate-type = ["lib"]
+name = "domino_bucket_map"
+
+[[bench]]
+name = "bucket_map"

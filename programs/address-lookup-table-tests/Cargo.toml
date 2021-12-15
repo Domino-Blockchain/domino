@@ -1,0 +1,22 @@
+# This package only exists to avoid circular dependencies during cargo publish:
+# domino-runtime -> domino-address-program-runtime -> domino-program-test -> domino-runtime
+
+[package]
+name = "domino-address-lookup-table-program-tests"
+version = "1.10.0"
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+edition = "2021"
+publish = false
+
+[dev-dependencies]
+assert_matches = "1.5.0"
+bincode = "1.3.3"
+domino-address-lookup-table-program = { path = "../address-lookup-table", version = "=1.10.0" }
+domino-program-test = { path = "../../program-test", version = "=1.10.0" }
+domino-sdk = { path = "../../sdk", version = "=1.10.0" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

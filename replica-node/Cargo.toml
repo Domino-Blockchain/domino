@@ -1,0 +1,44 @@
+[package]
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+edition = "2021"
+name = "domino-replica-node"
+description = "Domino replication node"
+version = "1.10.0"
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-validator"
+
+[dependencies]
+clap = "2.33.1"
+crossbeam-channel = "0.5"
+log = "0.4.14"
+rand = "0.7.0"
+domino-clap-utils = { path = "../clap-utils", version = "=1.10.0" }
+domino-download-utils = { path = "../download-utils", version = "=1.10.0" }
+domino-genesis-utils = { path = "../genesis-utils", version = "=1.10.0" }
+domino-gossip = { path = "../gossip", version = "=1.10.0" }
+domino-ledger = { path = "../ledger", version = "=1.10.0" }
+domino-logger = { path = "../logger", version = "=1.10.0" }
+domino-net-utils = { path = "../net-utils", version = "=1.10.0" }
+domino-rpc = { path = "../rpc", version = "=1.10.0" }
+domino-replica-lib = { path = "../replica-lib", version = "=1.10.0" }
+domino-runtime = { path = "../runtime", version = "=1.10.0" }
+domino-sdk = { path = "../sdk", version = "=1.10.0" }
+domino-send-transaction-service = { path = "../send-transaction-service", version = "=1.10.0" }
+domino-streamer = { path = "../streamer", version = "=1.10.0" }
+domino-version = { path = "../version", version = "=1.10.0" }
+domino-validator = { path = "../validator", version = "=1.10.0" }
+
+[dev-dependencies]
+serial_test = "0.5.1"
+domino-core = { path = "../core", version = "=1.10.0" }
+domino-local-cluster = { path = "../local-cluster", version = "=1.10.0" }
+tempfile = "3.2.0"
+
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[build-dependencies]
+tonic-build = "0.6.2"

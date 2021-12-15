@@ -1,0 +1,19 @@
+[package]
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+edition = "2021"
+name = "domino-accountsdb-plugin-interface"
+description = "The Domino AccountsDb plugin interface."
+version = "1.10.0"
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-accountsdb-plugin-interface"
+
+[dependencies]
+log = "0.4.11"
+thiserror = "1.0.30"
+domino-sdk = { path = "../sdk", version = "=1.10.0" }
+domino-transaction-status = { path = "../transaction-status", version = "=1.10.0" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

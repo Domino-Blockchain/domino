@@ -1,0 +1,25 @@
+[package]
+name = "domino-stake-accounts"
+description = "Blockchain, Rebuilt for Scale"
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+edition = "2021"
+version = "1.10.0"
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-stake-accounts"
+
+[dependencies]
+clap = "2.33.1"
+domino-clap-utils = { path = "../clap-utils", version = "=1.10.0" }
+domino-cli-config = { path = "../cli-config", version = "=1.10.0" }
+domino-client = { path = "../client", version = "=1.10.0" }
+domino-remote-wallet = { path = "../remote-wallet", version = "=1.10.0" }
+domino-sdk = { path = "../sdk", version = "=1.10.0" }
+domino-stake-program = { path = "../programs/stake", version = "=1.10.0" }
+
+[dev-dependencies]
+domino-runtime = { path = "../runtime", version = "=1.10.0" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

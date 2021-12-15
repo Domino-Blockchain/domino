@@ -1,0 +1,25 @@
+[package]
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+edition = "2021"
+name = "domino-poh-bench"
+version = "1.10.0"
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-poh-bench"
+publish = false
+
+[dependencies]
+clap = "2.33.1"
+log = "0.4.14"
+rand = "0.7.0"
+rayon = "1.5.1"
+domino-logger = { path = "../logger", version = "=1.10.0" }
+domino-entry = { path = "../entry", version = "=1.10.0" }
+domino-sdk = { path = "../sdk", version = "=1.10.0" }
+domino-measure = { path = "../measure", version = "=1.10.0" }
+domino-version = { path = "../version", version = "=1.10.0" }
+domino-perf = { path = "../perf", version = "=1.10.0" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

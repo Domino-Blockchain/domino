@@ -1,0 +1,15 @@
+[package]
+authors = ["Domino Maintainers <maintainers@domino.com>"]
+description = "Blockchain, Rebuilt for Scale"
+edition = "2021"
+homepage = "https://domino.com/"
+license = "Apache-2.0"
+name = "proto"
+publish = false
+repository = "https://github.com/domino-labs/domino"
+version = "1.10.0"
+
+[workspace]
+
+[dependencies]
+tonic-build = "0.6.0"

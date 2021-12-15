@@ -1,0 +1,39 @@
+[package]
+name = "domino-net-utils"
+version = "1.10.0"
+description = "Domino Network Utilities"
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-net-utils"
+edition = "2021"
+
+[dependencies]
+bincode = "1.3.3"
+clap = "2.33.1"
+log = "0.4.14"
+nix = "0.23.0"
+rand = "0.7.0"
+serde = "1.0.131"
+serde_derive = "1.0.103"
+socket2 = "0.4.2"
+domino-logger = { path = "../logger", version = "=1.10.0" }
+domino-sdk = { path = "../sdk", version = "=1.10.0" }
+domino-version = { path = "../version", version = "=1.10.0" }
+tokio = { version = "1", features = ["full"] }
+url = "2.2.2"
+
+[lib]
+name = "domino_net_utils"
+
+[[bin]]
+name = "domino-ip-address"
+path = "src/bin/ip_address.rs"
+
+[[bin]]
+name = "domino-ip-address-server"
+path = "src/bin/ip_address_server.rs"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

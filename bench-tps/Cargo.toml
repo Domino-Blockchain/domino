@@ -1,0 +1,36 @@
+[package]
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+edition = "2021"
+name = "domino-bench-tps"
+version = "1.10.0"
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+publish = false
+
+[dependencies]
+clap = "2.33.1"
+log = "0.4.14"
+rayon = "1.5.1"
+serde_json = "1.0.73"
+serde_yaml = "0.8.23"
+domino-core = { path = "../core", version = "=1.10.0" }
+domino-genesis = { path = "../genesis", version = "=1.10.0" }
+domino-client = { path = "../client", version = "=1.10.0" }
+domino-faucet = { path = "../faucet", version = "=1.10.0" }
+domino-gossip = { path = "../gossip", version = "=1.10.0" }
+domino-logger = { path = "../logger", version = "=1.10.0" }
+domino-metrics = { path = "../metrics", version = "=1.10.0" }
+domino-measure = { path = "../measure", version = "=1.10.0" }
+domino-net-utils = { path = "../net-utils", version = "=1.10.0" }
+domino-runtime = { path = "../runtime", version = "=1.10.0" }
+domino-sdk = { path = "../sdk", version = "=1.10.0" }
+domino-streamer = { path = "../streamer", version = "=1.10.0" }
+domino-version = { path = "../version", version = "=1.10.0" }
+
+[dev-dependencies]
+serial_test = "0.5.1"
+domino-local-cluster = { path = "../local-cluster", version = "=1.10.0" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

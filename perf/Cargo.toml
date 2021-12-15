@@ -1,0 +1,43 @@
+[package]
+name = "domino-perf"
+version = "1.10.0"
+description = "Domino Performance APIs"
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-perf"
+edition = "2021"
+
+[dependencies]
+bincode = "1.3.3"
+curve25519-dalek = { version = "3" }
+dlopen = "0.1.8"
+dlopen_derive = "0.1.4"
+lazy_static = "1.4.0"
+log = "0.4.14"
+rand = "0.7.0"
+rayon = "1.5.1"
+serde = "1.0.131"
+domino-logger = { path = "../logger", version = "=1.10.0" }
+domino-metrics = { path = "../metrics", version = "=1.10.0" }
+domino-sdk = { path = "../sdk", version = "=1.10.0" }
+domino-vote-program = { path = "../programs/vote", version = "=1.10.0" }
+domino-rayon-threadlimit = { path = "../rayon-threadlimit", version = "=1.10.0" }
+
+[target."cfg(target_os = \"linux\")".dependencies]
+caps = "0.5.3"
+libc = "0.2.112"
+nix = "0.23.0"
+
+[lib]
+name = "domino_perf"
+
+[dev-dependencies]
+matches = "0.1.9"
+
+[[bench]]
+name = "sigverify"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

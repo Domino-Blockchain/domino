@@ -1,0 +1,18 @@
+[package]
+name = "fail"
+version = "1.10.0"
+description = "Domino BPF test program written in Rust"
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+edition = "2021"
+publish = false
+
+[dependencies]
+domino-program = { path = "../../../../program", version = "=1.10.0" }
+
+[lib]
+crate-type = ["cdylib"]
+
+[workspace]

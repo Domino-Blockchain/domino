@@ -1,0 +1,40 @@
+[package]
+name = "domino-poh"
+version = "1.10.0"
+description = "Domino PoH"
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-poh"
+edition = "2021"
+
+[dependencies]
+core_affinity = "0.5.10"
+crossbeam-channel = "0.5"
+log = "0.4.14"
+domino-entry = { path = "../entry", version = "=1.10.0" }
+domino-ledger = { path = "../ledger", version = "=1.10.0" }
+domino-measure = { path = "../measure", version = "=1.10.0" }
+domino-metrics = { path = "../metrics", version = "=1.10.0" }
+domino-runtime = { path = "../runtime", version = "=1.10.0" }
+domino-sdk = { path = "../sdk", version = "=1.10.0" }
+domino-sys-tuner = { path = "../sys-tuner", version = "=1.10.0" }
+thiserror = "1.0"
+
+[dev-dependencies]
+bincode = "1.3.3"
+matches = "0.1.9"
+rand = "0.7.0"
+domino-logger = { path = "../logger", version = "=1.10.0" }
+domino-perf = { path = "../perf", version = "=1.10.0" }
+
+[lib]
+crate-type = ["lib"]
+name = "domino_poh"
+
+[[bench]]
+name = "poh"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

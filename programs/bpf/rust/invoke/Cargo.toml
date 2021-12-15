@@ -1,0 +1,24 @@
+[package]
+name = "domino-bpf-rust-invoke"
+version = "1.10.0"
+description = "Domino BPF test program written in Rust"
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-bpf-rust-invoke"
+edition = "2021"
+
+[features]
+default = ["program"]
+program = []
+
+[dependencies]
+domino-bpf-rust-invoked = { path = "../invoked", default-features = false }
+domino-program = { path = "../../../../sdk/program", version = "=1.10.0" }
+
+[lib]
+crate-type = ["lib", "cdylib"]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

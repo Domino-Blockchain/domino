@@ -1,0 +1,20 @@
+[package]
+name = "domino-send-transaction-service"
+version = "1.10.0"
+description = "Domino send transaction service"
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+repository = "https://github.com/domino-labs/domino"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-send-transaction-service"
+license = "Apache-2.0"
+edition = "2021"
+
+[dependencies]
+log = "0.4.14"
+domino-logger = { path = "../logger", version = "=1.10.0" }
+domino-metrics = { path = "../metrics", version = "=1.10.0" }
+domino-runtime = { path = "../runtime", version = "=1.10.0" }
+domino-sdk = { path = "../sdk", version = "=1.10.0" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

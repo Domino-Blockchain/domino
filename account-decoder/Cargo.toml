@@ -1,0 +1,30 @@
+[package]
+name = "domino-account-decoder"
+version = "1.10.0"
+description = "Domino account decoder"
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+repository = "https://github.com/domino-labs/domino"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-account-decoder"
+license = "Apache-2.0"
+edition = "2021"
+
+[dependencies]
+base64 = "0.12.3"
+bincode = "1.3.3"
+bs58 = "0.4.0"
+bv = "0.11.1"
+Inflector = "0.11.4"
+lazy_static = "1.4.0"
+serde = "1.0.131"
+serde_derive = "1.0.103"
+serde_json = "1.0.73"
+domino-config-program = { path = "../programs/config", version = "=1.10.0" }
+domino-sdk = { path = "../sdk", version = "=1.10.0" }
+domino-vote-program = { path = "../programs/vote", version = "=1.10.0" }
+spl-token = { version = "=3.2.0", features = ["no-entrypoint"] }
+thiserror = "1.0"
+zstd = "0.9.0"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

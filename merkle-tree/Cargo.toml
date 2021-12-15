@@ -1,0 +1,28 @@
+[package]
+name = "domino-merkle-tree"
+version = "1.10.0"
+description = "Domino Merkle Tree"
+authors = ["Domino Maintainers <maintainers@domino.foundation>"]
+repository = "https://github.com/domino-labs/domino"
+license = "Apache-2.0"
+homepage = "https://domino.com/"
+documentation = "https://docs.rs/domino-merkle-tree"
+edition = "2021"
+
+[dependencies]
+domino-program = { path = "../sdk/program", version = "=1.10.0" }
+fast-math = "0.1"
+
+# This can go once the BPF toolchain target Rust 1.42.0+
+[target.bpfel-unknown-unknown.dependencies]
+matches = "0.1.9"
+
+[dev-dependencies]
+hex = "0.4.3"
+
+[lib]
+crate-type = ["lib"]
+name = "domino_merkle_tree"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
