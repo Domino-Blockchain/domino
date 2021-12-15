@@ -1,6 +1,5 @@
 <p align="center">
-  <a href="https://dominochain.com">
-    <img alt="Domino" src="https://i.imgur.com/IKyzQ6T.png" width="250" />
+  <a href="https://dominochain.com"> Domino Blockchain
   </a>
 </p>
 
