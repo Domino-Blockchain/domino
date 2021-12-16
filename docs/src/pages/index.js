@@ -65,7 +65,7 @@ function Home() {
               <div className={clsx("col col--4", styles.feature)}>
                 <Link
                   className="navbar__link"
-                  to="https://spl.domino.com/token"
+                  to="https://spl.dominochain.com/token"
                 >
                   <div className="card">
                     <div className="card__header">

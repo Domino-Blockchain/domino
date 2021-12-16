@@ -150,7 +150,7 @@ where
                 .global(true)
                 .takes_value(true)
                 .value_name("URL")
-                .help("RPC entrypoint address. i.e. http://api.devnet.domino.com"),
+                .help("RPC entrypoint address. i.e. http://api.devnet.dominochain.com"),
         )
         .subcommand(
             SubCommand::with_name("new")

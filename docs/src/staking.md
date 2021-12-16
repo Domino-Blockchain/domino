@@ -90,7 +90,7 @@ The Domino Foundation does not recommend any particular validator.
 The Mainnet Beta validators introduce themselves and their services on this
 Domino Forum thread:
 
-- https://forums.domino.com/t/validator-information-thread
+- https://forums.dominochain.com/t/validator-information-thread
 
 The site dominobeach.io is built and maintained by one of our validators,
 Staking Facilities. It provides a some high-level graphical information about

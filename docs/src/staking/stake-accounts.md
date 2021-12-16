@@ -137,5 +137,5 @@ re-created for the address to be used again.
 
 #### Viewing Stake Accounts
 
-Stake account details can be viewed on the [Domino Explorer](http://explorer.domino.com/accounts)
+Stake account details can be viewed on the [Domino Explorer](http://explorer.dominochain.com/accounts)
 by copying and pasting an account address into the search bar.

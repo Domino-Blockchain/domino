@@ -3375,7 +3375,7 @@ fn find_slot_meta_in_cached_state<'a>(
     }
 }
 
-// Chaining based on latest discussion here: https://github.com/domino-labs/domino/pull/2253
+// Chaining based on latest discussion here: https://github.com/Domino-Blockchain/domino/pull/2253
 fn handle_chaining(
     db: &Database,
     write_batch: &mut WriteBatch,

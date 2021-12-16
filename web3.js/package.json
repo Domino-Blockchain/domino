@@ -7,11 +7,11 @@
     "blockchain"
   ],
   "license": "MIT",
-  "author": "Domino Maintainers <maintainers@domino.com>",
-  "homepage": "https://domino.com/",
+  "author": "Domino Maintainers <maintainers@dominochain.com>",
+  "homepage": "https://dominochain.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/domino-labs/domino-web3.js.git"
+    "url": "https://github.com/Domino-Blockchain/domino-web3.js.git"
   },
   "bugs": {
     "url": "http://github.com/domino-labs/domino-web3.js.git/issues"

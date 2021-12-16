@@ -171,7 +171,7 @@ describe('PublicKey', function () {
       ),
     ).to.be.rejectedWith('Max seed length exceeded');
 
-    // https://github.com/domino-labs/domino/issues/11950
+    // https://github.com/Domino-Blockchain/domino/issues/11950
     {
       let seeds = [
         new PublicKey(

@@ -46,7 +46,7 @@ esac
 
 case $URL in
 stable)
-  URL=http://api.devnet.domino.com
+  URL=http://api.devnet.dominochain.com
   ;;
 localhost)
   URL=http://localhost:8899
@@ -57,10 +57,10 @@ esac
 
 case $TAG in
 edge|beta)
-  DOWNLOAD_URL=https://release.domino.com/"$TAG"/domino-release-$TARGET.tar.bz2
+  DOWNLOAD_URL=https://release.dominochain.com/"$TAG"/domino-release-$TARGET.tar.bz2
   ;;
 *)
-  DOWNLOAD_URL=https://github.com/domino-labs/domino/releases/download/"$TAG"/domino-release-$TARGET.tar.bz2
+  DOWNLOAD_URL=https://github.com/Domino-Blockchain/domino/releases/download/"$TAG"/domino-release-$TARGET.tar.bz2
   ;;
 esac
 

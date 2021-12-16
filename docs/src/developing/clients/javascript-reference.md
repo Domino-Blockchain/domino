@@ -10,7 +10,7 @@ title: Web3 API Reference
 
 [Source Documentation](https://domino-labs.github.io/domino-web3.js/classes/Connection.html)
 
-Connection is used to interact with the [Domino JSON RPC](https://docs.domino.com/developing/clients/jsonrpc-api). You can use Connection to confirm transactions, get account info, and more.
+Connection is used to interact with the [Domino JSON RPC](https://docs.dominochain.com/developing/clients/jsonrpc-api). You can use Connection to confirm transactions, get account info, and more.
 
 You create a connection by defining the JSON RPC cluster endpoint and the desired commitment. Once this is complete, you can use this connection object to interact with any of the Domino JSON RPC API.
 

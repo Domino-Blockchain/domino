@@ -348,7 +348,7 @@ pub fn main() {
         SocketAddr::new(rpc_bind_address, rpc_port + 1),
         // If additional ports are added, +2 needs to be skipped to avoid a conflict with
         // the websocket port (which is +2) in web3.js This odd port shifting is tracked at
-        // https://github.com/domino-labs/domino/issues/12250
+        // https://github.com/Domino-Blockchain/domino/issues/12250
     );
 
     let logfile = {

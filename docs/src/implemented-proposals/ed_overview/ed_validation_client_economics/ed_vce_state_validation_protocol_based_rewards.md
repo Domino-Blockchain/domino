@@ -2,7 +2,7 @@
 title: Inflation Schedule
 ---
 
-**Subject to change. Follow most recent economic discussions in the Domino forums: https://forums.domino.com**
+**Subject to change. Follow most recent economic discussions in the Domino forums: https://forums.dominochain.com**
 
 Validator-clients have two functional roles in the Domino network:
 

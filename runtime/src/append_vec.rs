@@ -2,7 +2,7 @@
 //!
 //! For more information, see:
 //!
-//! <https://docs.domino.com/implemented-proposals/persistent-account-storage>
+//! <https://docs.dominochain.com/implemented-proposals/persistent-account-storage>
 
 use {
     log::*,

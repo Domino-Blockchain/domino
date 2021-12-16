@@ -7,11 +7,11 @@ testnet participants, [https://discord.gg/pquxPsq](https://discord.gg/pquxPsq).
 
 ## Useful Links & Discussion
 
-- [Network Explorer](http://explorer.domino.com/)
-- [Testnet Metrics Dashboard](https://metrics.domino.com:3000/d/monitor-edge/cluster-telemetry-edge?refresh=60s&orgId=2)
+- [Network Explorer](http://explorer.dominochain.com/)
+- [Testnet Metrics Dashboard](https://metrics.dominochain.com:3000/d/monitor-edge/cluster-telemetry-edge?refresh=60s&orgId=2)
 - Validator chat channels
   - [\#validator-support](https://discord.gg/rZsenD) General support channel for any Validator related queries.
   - [\#testnet-announcements](https://discord.gg/Q5TxEC) The single source of truth for critical information relating Testnet
-- [Core software repo](https://github.com/domino-labs/domino)
+- [Core software repo](https://github.com/Domino-Blockchain/domino)
 
-Can't find what you're looking for? Send an email to ryan@domino.com or reach out to @rshea\#2622 on Discord.
+Can't find what you're looking for? Send an email to ryan@dominochain.com or reach out to @rshea\#2622 on Discord.

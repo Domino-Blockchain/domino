@@ -8,7 +8,7 @@
 ## Reporting security problems to Domino
 
 **DO NOT CREATE AN ISSUE** to report a security problem. Instead, please send an
-email to security@domino.com and provide your github username so we can add you
+email to security@dominochain.com and provide your github username so we can add you
 to a new draft security advisory for further discussion.
 
 Expect a response as fast as possible, within one business day at the latest.
@@ -44,8 +44,8 @@ $5,000 USD in locked DOMI tokens (locked for 12 months)
 
 Out of Scope:
 The following components are out of scope for the bounty program
-* Metrics: `/metrics` in the monorepo as well as https://metrics.domino.com
-* Explorer: `/explorer` in the monorepo as well as https://explorer.domino.com
+* Metrics: `/metrics` in the monorepo as well as https://metrics.dominochain.com
+* Explorer: `/explorer` in the monorepo as well as https://explorer.dominochain.com
 * Any encrypted credentials, auth tokens, etc. checked into the repo
 * Bugs in dependencies. Please take them upstream!
 * Attacks that require social engineering
@@ -54,7 +54,7 @@ Eligibility:
 * The participant submitting the bug report shall follow the process outlined within this document
 * Valid exploits can be eligible even if they are not successfully executed on the cluster
 * Multiple submissions for the same class of exploit are still eligible for compensation, though may be compensated at a lower rate, however these will be assessed on a case-by-case basis
-* Participants must complete KYC and sign the participation agreement here when the registrations are open https://domino.com/validator-registration. Security exploits will still be assessed and open for submission at all times. This needs only be done prior to distribution of tokens.
+* Participants must complete KYC and sign the participation agreement here when the registrations are open https://dominochain.com/validator-registration. Security exploits will still be assessed and open for submission at all times. This needs only be done prior to distribution of tokens.
 
 Payment of Bug Bounties:
 * Payments for eligible bug reports are distributed monthly.
@@ -69,8 +69,8 @@ following month.
   payouts is the Close price on 2021-03-31 of $19.49.  This applies to all bugs
   submitted in March 2021, to be paid in mid-April 2021.
 * Bug bounties are paid out in
-[stake accounts](https://domino.com/staking) with a
-[lockup](https://docs.domino.com/staking/stake-accounts#lockups)
+[stake accounts](https://dominochain.com/staking) with a
+[lockup](https://docs.dominochain.com/staking/stake-accounts#lockups)
 expiring 12 months from the last day of the month in which the bug was submitted.
 
 <a name="process"></a>
@@ -80,8 +80,8 @@ In case an incident is discovered or reported, the following process will be
 followed to contain, respond and remediate:
 
 ### 1. Establish a new draft security advisory
-In response to an email to security@domino.com, a member of the `domino-labs/admins` group will
-1. Create a new draft security advisory for the incident at https://github.com/domino-labs/domino/security/advisories
+In response to an email to security@dominochain.com, a member of the `domino-labs/admins` group will
+1. Create a new draft security advisory for the incident at https://github.com/Domino-Blockchain/domino/security/advisories
 1. Add the reporter's github user and the `domino-labs/security-incident-response` group to the draft security advisory
 1. Create a private fork of the repository (grey button towards the bottom of the page)
 1. Respond to the reporter by email, sharing a link to the draft security advisory
@@ -122,16 +122,16 @@ file for each affected branch. The commit title for the patch should only
 contain the advisory id, and not disclose any further details about the
 incident.
 
-Copy the patches to https://release.domino.com/ under a subdirectory named after
+Copy the patches to https://release.dominochain.com/ under a subdirectory named after
 the advisory id (example:
-https://release.domino.com/GHSA-hx59-f5g4-jghh/v1.4.patch). Contact a member of
-the `domino-labs/admins` group if you require access to release.domino.com
+https://release.dominochain.com/GHSA-hx59-f5g4-jghh/v1.4.patch). Contact a member of
+the `domino-labs/admins` group if you require access to release.dominochain.com
 
 Using the "Domino Red Alert" channel:
 1. Notify validators that there's an issue and a patch will be provided in X minutes
 2. If X minutes expires and there's no patch, notify of the delay and provide a
    new ETA
-3. Provide links to patches of https://release.domino.com/ for each affected branch
+3. Provide links to patches of https://release.dominochain.com/ for each affected branch
 
 Validators can be expected to build the patch from source against the latest
 release for the affected branch.

@@ -113,16 +113,16 @@ for file in "${TARBALL_BASENAME}"-$TARGET.tar.bz2 "${TARBALL_BASENAME}"-$TARGET.
 
   if [[ -n $BUILDKITE ]]; then
     echo --- AWS S3 Store: "$file"
-    upload-s3-artifact "/domino/$file" s3://release.domino.com/"$CHANNEL_OR_TAG"/"$file"
+    upload-s3-artifact "/domino/$file" s3://release.dominochain.com/"$CHANNEL_OR_TAG"/"$file"
 
     echo Published to:
-    $DRYRUN ci/format-url.sh https://release.domino.com/"$CHANNEL_OR_TAG"/"$file"
+    $DRYRUN ci/format-url.sh https://release.dominochain.com/"$CHANNEL_OR_TAG"/"$file"
 
     if [[ -n $TAG ]]; then
       ci/upload-github-release-asset.sh "$file"
     fi
   elif [[ -n $TRAVIS ]]; then
-    # .travis.yml uploads everything in the travis-s3-upload/ directory to release.domino.com
+    # .travis.yml uploads everything in the travis-s3-upload/ directory to release.dominochain.com
     mkdir -p travis-s3-upload/"$CHANNEL_OR_TAG"
     cp -v "$file" travis-s3-upload/"$CHANNEL_OR_TAG"/
 
@@ -139,21 +139,21 @@ for file in "${TARBALL_BASENAME}"-$TARGET.tar.bz2 "${TARBALL_BASENAME}"-$TARGET.
 done
 
 
-# Create install wrapper for release.domino.com
+# Create install wrapper for release.dominochain.com
 if [[ -n $DO_NOT_PUBLISH_TAR ]]; then
   echo "Skipping publishing install wrapper"
 elif [[ -n $BUILDKITE ]]; then
-  cat > release.domino.com-install <<EOF
+  cat > release.dominochain.com-install <<EOF
 DOMINO_RELEASE=$CHANNEL_OR_TAG
 DOMINO_INSTALL_INIT_ARGS=$CHANNEL_OR_TAG
-DOMINO_DOWNLOAD_ROOT=http://release.domino.com
+DOMINO_DOWNLOAD_ROOT=http://release.dominochain.com
 EOF
-  cat install/domino-install-init.sh >> release.domino.com-install
+  cat install/domino-install-init.sh >> release.dominochain.com-install
 
   echo --- AWS S3 Store: "install"
-  $DRYRUN upload-s3-artifact "/domino/release.domino.com-install" "s3://release.domino.com/$CHANNEL_OR_TAG/install"
+  $DRYRUN upload-s3-artifact "/domino/release.dominochain.com-install" "s3://release.dominochain.com/$CHANNEL_OR_TAG/install"
   echo Published to:
-  $DRYRUN ci/format-url.sh https://release.domino.com/"$CHANNEL_OR_TAG"/install
+  $DRYRUN ci/format-url.sh https://release.dominochain.com/"$CHANNEL_OR_TAG"/install
 fi
 
 echo --- ok

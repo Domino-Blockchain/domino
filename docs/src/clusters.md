@@ -9,7 +9,7 @@ Before you begin make sure you have first
 
 Explorers:
 
-- [http://explorer.domino.com/](https://explorer.domino.com/).
+- [http://explorer.dominochain.com/](https://explorer.dominochain.com/).
 - [http://dominobeach.io/](http://dominobeach.io/).
 
 ## Devnet
@@ -23,19 +23,19 @@ Explorers:
   - Devnet includes a token faucet for airdrops for application testing
   - Devnet may be subject to ledger resets
   - Devnet typically runs a newer software version than Mainnet Beta
-- Gossip entrypoint for Devnet: `entrypoint.devnet.domino.com:8001`
+- Gossip entrypoint for Devnet: `entrypoint.devnet.dominochain.com:8001`
 - Metrics environment variable for Devnet:
 
 ```bash
-export DOMINO_METRICS_CONFIG="host=https://metrics.domino.com:8086,db=devnet,u=scratch_writer,p=topsecret"
+export DOMINO_METRICS_CONFIG="host=https://metrics.dominochain.com:8086,db=devnet,u=scratch_writer,p=topsecret"
 ```
 
-- RPC URL for Devnet: `https://api.devnet.domino.com`
+- RPC URL for Devnet: `https://api.devnet.dominochain.com`
 
 ##### Example `domino` command-line configuration
 
 ```bash
-domino config set --url https://api.devnet.domino.com
+domino config set --url https://api.devnet.dominochain.com
 ```
 
 ##### Example `domino-validator` command-line
@@ -52,11 +52,11 @@ $ domino-validator \
     --ledger ledger \
     --rpc-port 8899 \
     --dynamic-port-range 8000-8010 \
-    --entrypoint entrypoint.devnet.domino.com:8001 \
-    --entrypoint entrypoint2.devnet.domino.com:8001 \
-    --entrypoint entrypoint3.devnet.domino.com:8001 \
-    --entrypoint entrypoint4.devnet.domino.com:8001 \
-    --entrypoint entrypoint5.devnet.domino.com:8001 \
+    --entrypoint entrypoint.devnet.dominochain.com:8001 \
+    --entrypoint entrypoint2.devnet.dominochain.com:8001 \
+    --entrypoint entrypoint3.devnet.dominochain.com:8001 \
+    --entrypoint entrypoint4.devnet.dominochain.com:8001 \
+    --entrypoint entrypoint5.devnet.dominochain.com:8001 \
     --expected-genesis-hash EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG \
     --wal-recovery-mode skip_any_corrupted_record \
     --limit-ledger-size
@@ -75,19 +75,19 @@ are operated by Domino Labs
 - Testnet includes a token faucet for airdrops for application testing
 - Testnet typically runs a newer software release than both Devnet and
   Mainnet Beta
-- Gossip entrypoint for Testnet: `entrypoint.testnet.domino.com:8001`
+- Gossip entrypoint for Testnet: `entrypoint.testnet.dominochain.com:8001`
 - Metrics environment variable for Testnet:
 
 ```bash
-export DOMINO_METRICS_CONFIG="host=https://metrics.domino.com:8086,db=tds,u=testnet_write,p=c4fa841aa918bf8274e3e2a44d77568d9861b3ea"
+export DOMINO_METRICS_CONFIG="host=https://metrics.dominochain.com:8086,db=tds,u=testnet_write,p=c4fa841aa918bf8274e3e2a44d77568d9861b3ea"
 ```
 
-- RPC URL for Testnet: `https://api.testnet.domino.com`
+- RPC URL for Testnet: `https://api.testnet.dominochain.com`
 
 ##### Example `domino` command-line configuration
 
 ```bash
-domino config set --url https://api.testnet.domino.com
+domino config set --url https://api.testnet.dominochain.com
 ```
 
 ##### Example `domino-validator` command-line
@@ -104,9 +104,9 @@ $ domino-validator \
     --ledger ledger \
     --rpc-port 8899 \
     --dynamic-port-range 8000-8010 \
-    --entrypoint entrypoint.testnet.domino.com:8001 \
-    --entrypoint entrypoint2.testnet.domino.com:8001 \
-    --entrypoint entrypoint3.testnet.domino.com:8001 \
+    --entrypoint entrypoint.testnet.dominochain.com:8001 \
+    --entrypoint entrypoint2.testnet.dominochain.com:8001 \
+    --entrypoint entrypoint3.testnet.dominochain.com:8001 \
     --expected-genesis-hash 4uhcVJyU9pJkvQyS88uRDiswHXSCkY3zQawwpjk2NsNY \
     --wal-recovery-mode skip_any_corrupted_record \
     --limit-ledger-size
@@ -115,7 +115,7 @@ $ domino-validator \
 The identities of the
 [`--known-validator`s](running-validator/validator-start.md#known-validators) are:
 
-- `5D1fNXzvv5NjV1ysLjirC4WY92RNsVH18vjmcszZd8on` - Domino Labs (testnet.domino.com)
+- `5D1fNXzvv5NjV1ysLjirC4WY92RNsVH18vjmcszZd8on` - Domino Labs (testnet.dominochain.com)
 - `Ft5fbkqNa76vnsjYNwjDZUXoTWpP7VYm3mtsaQckQADN` - Certus One
 - `9QxCLckBiJc783jnMvXZubK4wH86Eqqvashtrwvcsgkv` - Algo|Stake
 
@@ -129,19 +129,19 @@ A permissionless, persistent cluster for early token holders and launch partners
   - Note: If you are using a non-command-line wallet such as
     [Solflare](wallet-guide/solflare.md),
     the wallet will always be connecting to Mainnet Beta.
-- Gossip entrypoint for Mainnet Beta: `entrypoint.mainnet-beta.domino.com:8001`
+- Gossip entrypoint for Mainnet Beta: `entrypoint.mainnet-beta.dominochain.com:8001`
 - Metrics environment variable for Mainnet Beta:
 
 ```bash
-export DOMINO_METRICS_CONFIG="host=https://metrics.domino.com:8086,db=mainnet-beta,u=mainnet-beta_write,p=password"
+export DOMINO_METRICS_CONFIG="host=https://metrics.dominochain.com:8086,db=mainnet-beta,u=mainnet-beta_write,p=password"
 ```
 
-- RPC URL for Mainnet Beta: `https://api.mainnet-beta.domino.com`
+- RPC URL for Mainnet Beta: `https://api.mainnet-beta.dominochain.com`
 
 ##### Example `domino` command-line configuration
 
 ```bash
-domino config set --url https://api.mainnet-beta.domino.com
+domino config set --url https://api.mainnet-beta.dominochain.com
 ```
 
 ##### Example `domino-validator` command-line
@@ -159,11 +159,11 @@ $ domino-validator \
     --rpc-port 8899 \
     --private-rpc \
     --dynamic-port-range 8000-8010 \
-    --entrypoint entrypoint.mainnet-beta.domino.com:8001 \
-    --entrypoint entrypoint2.mainnet-beta.domino.com:8001 \
-    --entrypoint entrypoint3.mainnet-beta.domino.com:8001 \
-    --entrypoint entrypoint4.mainnet-beta.domino.com:8001 \
-    --entrypoint entrypoint5.mainnet-beta.domino.com:8001 \
+    --entrypoint entrypoint.mainnet-beta.dominochain.com:8001 \
+    --entrypoint entrypoint2.mainnet-beta.dominochain.com:8001 \
+    --entrypoint entrypoint3.mainnet-beta.dominochain.com:8001 \
+    --entrypoint entrypoint4.mainnet-beta.dominochain.com:8001 \
+    --entrypoint entrypoint5.mainnet-beta.dominochain.com:8001 \
     --expected-genesis-hash 5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d \
     --wal-recovery-mode skip_any_corrupted_record \
     --limit-ledger-size

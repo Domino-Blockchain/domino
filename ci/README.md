@@ -103,13 +103,13 @@ current CI load.  If no machine is currently running it can take up to 60
 seconds to spin up a new instance, please remain calm during this time.
 
 ### AMI
-We use a custom AWS AMI built via https://github.com/domino-labs/elastic-ci-stack-for-aws/tree/domino/cuda.
+We use a custom AWS AMI built via https://github.com/Domino-Blockchain/elastic-ci-stack-for-aws/tree/domino/cuda.
 
 Use the following process to update this AMI as dependencies change:
 ```bash
 $ export AWS_ACCESS_KEY_ID=my_access_key
 $ export AWS_SECRET_ACCESS_KEY=my_secret_access_key
-$ git clone https://github.com/domino-labs/elastic-ci-stack-for-aws.git -b domino/cuda
+$ git clone https://github.com/Domino-Blockchain/elastic-ci-stack-for-aws.git -b domino/cuda
 $ cd elastic-ci-stack-for-aws/
 $ make build
 $ make build-ami

@@ -7,7 +7,7 @@ process, separated from transaction creation and network broadcast. Examples
 include:
 
 - Collecting signatures from geographically disparate signers in a
-  [multi-signature scheme](https://spl.domino.com/token#multisig-usage)
+  [multi-signature scheme](https://spl.dominochain.com/token#multisig-usage)
 - Signing transactions using an [airgapped](<https://en.wikipedia.org/wiki/Air_gap_(networking)>)
   signing device
 

@@ -6,12 +6,12 @@ As mentioned above, the network's _Inflation Schedule_ is uniquely described by 
 
 - A large portion of the DOMI issued via inflation will be distributed to stake-holders in proportion to the DOMI they have staked. We want to ensure that the _Inflation Schedule_ design results in reasonable _Staking Yields_ for token holders who delegate DOMI and for validation service providers (via commissions taken from _Staking Yields_).
 - The primary driver of _Staked Yield_ is the amount of DOMI staked divided by the total amount of DOMI (% of total DOMI staked). Therefore the distribution and delegation of tokens across validators are important factors to understand when determining initial inflation parameters.
-- [Yield throttling](https://forums.domino.com/t/validator-yield-throttling-proposal-discussion/855/5) is a current area of research that would impact _staking-yields_. This is not taken into consideration in the discussion here or the modeling below.
+- [Yield throttling](https://forums.dominochain.com/t/validator-yield-throttling-proposal-discussion/855/5) is a current area of research that would impact _staking-yields_. This is not taken into consideration in the discussion here or the modeling below.
 - Overall token issuance - i.e. what do we expect the Current Total Supply to be in 10 years, or 20 years?
 - Long-term, steady-state inflation is an important consideration not only for sustainable support for the validator ecosystem and the Domino Foundation grant programs, but also should be tuned in consideration with expected token losses and burning over time.
 - The rate at which we expect network usage to grow, as a consideration to the dis-inflationary rate. Over time, we plan for inflation to drop and expect that usage will grow.
 
-Based on these considerations and the community discussions following the initial [design](https://forums.domino.com/t/domino-inflation-design-overview/920), the Domino Foundation proposes the following Inflation Schedule parameters:
+Based on these considerations and the community discussions following the initial [design](https://forums.dominochain.com/t/domino-inflation-design-overview/920), the Domino Foundation proposes the following Inflation Schedule parameters:
 
 - Initial Inflation Rate: $8\%$
 - Dis-inflation Rate: $-15\%$

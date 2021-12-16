@@ -8,7 +8,7 @@ The domino cli includes `get` and `set` configuration commands to automatically
 set the `--url` argument for cli commands. For example:
 
 ```bash
-domino config set --url http://api.devnet.domino.com
+domino config set --url http://api.devnet.dominochain.com
 ```
 
 While this section demonstrates how to connect to the Devnet cluster, the steps
@@ -23,7 +23,7 @@ to your machine by fetching the transaction count:
 domino transaction-count
 ```
 
-View the [metrics dashboard](https://metrics.domino.com:3000/d/monitor/cluster-telemetry) for more
+View the [metrics dashboard](https://metrics.dominochain.com:3000/d/monitor/cluster-telemetry) for more
 detail on cluster activity.
 
 ## Enabling CUDA
@@ -198,8 +198,8 @@ You should see the following output:
 
 ```text
 Config File: /home/domino/.config/domino/cli/config.yml
-RPC URL: http://api.devnet.domino.com
-WebSocket URL: ws://api.devnet.domino.com/ (computed)
+RPC URL: http://api.devnet.dominochain.com
+WebSocket URL: ws://api.devnet.dominochain.com/ (computed)
 Keypair Path: /home/domino/validator-keypair.json
 Commitment: confirmed
 ```
@@ -290,7 +290,7 @@ domino-validator \
   --identity ~/validator-keypair.json \
   --vote-account ~/vote-account-keypair.json \
   --rpc-port 8899 \
-  --entrypoint entrypoint.devnet.domino.com:8001 \
+  --entrypoint entrypoint.devnet.dominochain.com:8001 \
   --limit-ledger-size \
   --log ~/domino-validator.log
 ```
@@ -336,7 +336,7 @@ less disk usage may be requested by adding an argument to `--limit-ledger-size`
 if desired. Check `domino-validator --help` for the default limit value used by
 `--limit-ledger-size`. More information about
 selecting a custom limit value is [available
-here](https://github.com/domino-labs/domino/blob/583cec922b6107e0f85c7e14cb5e642bc7dfb340/core/src/ledger_cleanup_service.rs#L15-L26).
+here](https://github.com/Domino-Blockchain/domino/blob/583cec922b6107e0f85c7e14cb5e642bc7dfb340/core/src/ledger_cleanup_service.rs#L15-L26).
 
 ### Systemd Unit
 

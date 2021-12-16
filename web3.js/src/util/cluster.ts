@@ -1,13 +1,13 @@
 const endpoint = {
   http: {
-    devnet: 'http://api.devnet.domino.com',
-    testnet: 'http://api.testnet.domino.com',
-    'mainnet-beta': 'http://api.mainnet-beta.domino.com',
+    devnet: 'http://api.devnet.dominochain.com',
+    testnet: 'http://api.testnet.dominochain.com',
+    'mainnet-beta': 'http://api.mainnet-beta.dominochain.com',
   },
   https: {
-    devnet: 'https://api.devnet.domino.com',
-    testnet: 'https://api.testnet.domino.com',
-    'mainnet-beta': 'https://api.mainnet-beta.domino.com',
+    devnet: 'https://api.devnet.dominochain.com',
+    testnet: 'https://api.testnet.dominochain.com',
+    'mainnet-beta': 'https://api.mainnet-beta.dominochain.com',
   },
 };
 

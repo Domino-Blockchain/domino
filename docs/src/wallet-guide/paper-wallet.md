@@ -181,7 +181,7 @@ Next, configure the `domino` CLI tool to
 [connect to a particular cluster](../cli/choose-a-cluster.md):
 
 ```bash
-domino config set --url <CLUSTER URL> # (i.e. https://api.mainnet-beta.domino.com)
+domino config set --url <CLUSTER URL> # (i.e. https://api.mainnet-beta.dominochain.com)
 ```
 
 Finally, to check the balance, run the following command:

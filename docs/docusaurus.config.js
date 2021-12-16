@@ -4,7 +4,7 @@ module.exports = {
   title: "Domino Docs",
   tagline:
     "Domino is an open source project implementing a new, high-performance, permissionless blockchain.",
-  url: "https://docs.domino.com",
+  url: "https://docs.dominochain.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   organizationName: "domino-labs", // Usually your GitHub org/user name.
@@ -53,7 +53,7 @@ module.exports = {
       },
       items: [
         {
-          href: "https://spl.domino.com",
+          href: "https://spl.dominochain.com",
           label: "Program Library »",
           position: "left",
         },
@@ -87,7 +87,7 @@ module.exports = {
           position: "right",
         },
         {
-          href: "https://github.com/domino-labs/domino",
+          href: "https://github.com/Domino-Blockchain/domino",
           label: "GitHub",
           position: "right",
         },
@@ -124,7 +124,7 @@ module.exports = {
             },
             {
               label: "Forums",
-              href: "https://forums.domino.com",
+              href: "https://forums.dominochain.com",
             },
           ],
         },
@@ -133,7 +133,7 @@ module.exports = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/domino-labs/domino",
+              href: "https://github.com/Domino-Blockchain/domino",
             },
           ],
         },

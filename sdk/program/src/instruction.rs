@@ -260,7 +260,7 @@ pub enum InstructionError {
 /// clients. Instructions are also used to describe [cross-program
 /// invocations][cpi].
 ///
-/// [cpi]: https://docs.domino.com/developing/programming-model/calling-between-programs
+/// [cpi]: https://docs.dominochain.com/developing/programming-model/calling-between-programs
 ///
 /// During execution, a program will receive a list of account data as one of
 /// its arguments, in the same order as specified during `Instruction`

@@ -10,13 +10,13 @@ describe('Cluster Util', () => {
   });
 
   it('devnet', () => {
-    expect(clusterApiUrl()).to.eq('https://api.devnet.domino.com');
-    expect(clusterApiUrl('devnet')).to.eq('https://api.devnet.domino.com');
+    expect(clusterApiUrl()).to.eq('https://api.devnet.dominochain.com');
+    expect(clusterApiUrl('devnet')).to.eq('https://api.devnet.dominochain.com');
     expect(clusterApiUrl('devnet', true)).to.eq(
-      'https://api.devnet.domino.com',
+      'https://api.devnet.dominochain.com',
     );
     expect(clusterApiUrl('devnet', false)).to.eq(
-      'http://api.devnet.domino.com',
+      'http://api.devnet.dominochain.com',
     );
   });
 });

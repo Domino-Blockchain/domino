@@ -99,7 +99,7 @@ if [[ ! -e bpf-tools-$version.md || ! -e bpf-tools ]]; then
     rm -rf bpf-tools*
     rm -rf xargo
     job="download \
-           https://github.com/domino-labs/bpf-tools/releases/download \
+           https://github.com/Domino-Blockchain/bpf-tools/releases/download \
            $version \
            domino-bpf-tools-$machine.tar.bz2 \
            bpf-tools"

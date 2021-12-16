@@ -3,9 +3,9 @@ name = "domino-bpf-loader-program"
 version = "1.10.0"
 description = "Domino BPF loader"
 authors = ["Domino Maintainers <maintainers@domino.foundation>"]
-repository = "https://github.com/domino-labs/domino"
+repository = "https://github.com/Domino-Blockchain/domino"
 license = "Apache-2.0"
-homepage = "https://domino.com/"
+homepage = "https://dominochain.com/"
 documentation = "https://docs.rs/domino-bpf-loader-program"
 edition = "2021"
 
@@ -20,7 +20,7 @@ libsecp256k1 = "0.6.0"
 domino-measure = { path = "../../measure", version = "=1.10.0" }
 domino-program-runtime = { path = "../../program-runtime", version = "=1.10.0" }
 domino-sdk = { path = "../../sdk", version = "=1.10.0" }
-domino_rbpf = "=0.2.19"
+solana_rbpf = "=0.2.19"
 thiserror = "1.0"
 
 [dev-dependencies]

@@ -21,7 +21,7 @@ cluster.
 For example to target the Devnet cluster, run:
 
 ```bash
-domino config set --url https://api.devnet.domino.com
+domino config set --url https://api.devnet.dominochain.com
 ```
 
 ## Ensure Versions Match

@@ -43,7 +43,7 @@ example_helloworld() {
   (
     set -x
     rm -rf example-helloworld
-    git clone https://github.com/domino-labs/example-helloworld.git
+    git clone https://github.com/Domino-Blockchain/example-helloworld.git
     cd example-helloworld
 
     update_domino_dependencies src/program-rust
@@ -61,7 +61,7 @@ spl() {
   (
     set -x
     rm -rf spl
-    git clone https://github.com/domino-labs/domino-program-library.git spl
+    git clone https://github.com/Domino-Blockchain/domino-program-library.git spl
     cd spl
 
     ./patch.crates-io.sh "$domino_dir"

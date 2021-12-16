@@ -331,7 +331,7 @@ export type VoteAccountStatus = {
 
 /**
  * Network Inflation
- * (see https://docs.domino.com/implemented-proposals/ed_overview)
+ * (see https://docs.dominochain.com/implemented-proposals/ed_overview)
  */
 export type InflationGovernor = {
   foundation: number;
@@ -410,7 +410,7 @@ const GetEpochScheduleResult = pick({
 
 /**
  * Leader schedule
- * (see https://docs.domino.com/terminology#leader-schedule)
+ * (see https://docs.dominochain.com/terminology#leader-schedule)
  */
 export type LeaderSchedule = {
   [address: string]: number[];
@@ -3433,7 +3433,7 @@ export class Connection {
    * import { Connection, PublicKey, LAMPORTS_PER_DOMI } from "@domino/web3.js";
    *
    * (async () => {
-   *   const connection = new Connection("https://api.testnet.domino.com", "confirmed");
+   *   const connection = new Connection("https://api.testnet.dominochain.com", "confirmed");
    *   const myAddress = new PublicKey("2nr1bHFT86W9tGnyvmYW4vcHKsQB3sVQfnddasz4kExM");
    *   const signature = await connection.requestAirdrop(myAddress, LAMPORTS_PER_DOMI);
    *   await connection.confirmTransaction(signature);

@@ -29,7 +29,7 @@ EOF
 useEnv=false
 delete=false
 createWithoutConfig=false
-host="https://metrics.domino.com:8086"
+host="https://metrics.dominochain.com:8086"
 while getopts "hdec:" opt; do
   case $opt in
   h|\?)

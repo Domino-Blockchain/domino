@@ -137,7 +137,7 @@ macro_rules! entrypoint {
 /// for [BPF] targets.
 ///
 /// [Cargo features]: https://doc.rust-lang.org/cargo/reference/features.html
-/// [BPF]: https://docs.domino.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf
+/// [BPF]: https://docs.dominochain.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf
 ///
 /// # Cargo features
 ///
@@ -172,7 +172,7 @@ macro_rules! custom_heap_default {
 /// for [BPF] targets.
 ///
 /// [Cargo features]: https://doc.rust-lang.org/cargo/reference/features.html
-/// [BPF]: https://docs.domino.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf
+/// [BPF]: https://docs.dominochain.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf
 ///
 /// # Cargo features
 ///

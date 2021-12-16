@@ -34,7 +34,7 @@ pub struct Config {
     ///
     /// For local testing, the typical value is `http://localhost:8899`.
     ///
-    /// [rpcdocs]: https://docs.domino.com/cluster/rpc-endpoints
+    /// [rpcdocs]: https://docs.dominochain.com/cluster/rpc-endpoints
     pub json_rpc_url: String,
     /// The address to connect to for receiving event notifications.
     ///
@@ -73,7 +73,7 @@ impl Default for Config {
             keypair_path.extend(&[".config", "domino", "id.json"]);
             keypair_path.to_str().unwrap().to_string()
         };
-        let json_rpc_url = "https://api.mainnet-beta.domino.com".to_string();
+        let json_rpc_url = "https://api.mainnet-beta.dominochain.com".to_string();
 
         // Empty websocket_url string indicates the client should
         // `Config::compute_websocket_url(&json_rpc_url)`
@@ -177,13 +177,13 @@ mod test {
     #[test]
     fn compute_websocket_url() {
         assert_eq!(
-            Config::compute_websocket_url("http://api.devnet.domino.com"),
-            "ws://api.devnet.domino.com/".to_string()
+            Config::compute_websocket_url("http://api.devnet.dominochain.com"),
+            "ws://api.devnet.dominochain.com/".to_string()
         );
 
         assert_eq!(
-            Config::compute_websocket_url("https://api.devnet.domino.com"),
-            "wss://api.devnet.domino.com/".to_string()
+            Config::compute_websocket_url("https://api.devnet.dominochain.com"),
+            "wss://api.devnet.dominochain.com/".to_string()
         );
 
         assert_eq!(

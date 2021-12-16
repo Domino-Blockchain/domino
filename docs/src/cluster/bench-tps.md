@@ -6,16 +6,16 @@ The Domino git repository contains all the scripts you might need to spin up you
 
 For all four variations, you'd need the latest Rust toolchain and the Domino source code:
 
-First, setup Rust, Cargo and system packages as described in the Domino [README](https://github.com/domino-labs/domino#1-install-rustc-cargo-and-rustfmt)
+First, setup Rust, Cargo and system packages as described in the Domino [README](https://github.com/Domino-Blockchain/domino#1-install-rustc-cargo-and-rustfmt)
 
 Now checkout the code from github:
 
 ```bash
-git clone https://github.com/domino-labs/domino.git
+git clone https://github.com/Domino-Blockchain/domino.git
 cd domino
 ```
 
-The demo code is sometimes broken between releases as we add new low-level features, so if this is your first time running the demo, you'll improve your odds of success if you check out the [latest release](https://github.com/domino-labs/domino/releases) before proceeding:
+The demo code is sometimes broken between releases as we add new low-level features, so if this is your first time running the demo, you'll improve your odds of success if you check out the [latest release](https://github.com/Domino-Blockchain/domino/releases) before proceeding:
 
 ```bash
 TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
@@ -123,7 +123,7 @@ This will dump all the threads stack traces into gdb.txt
 In this example the client connects to our public testnet. To run validators on the testnet you would need to open udp ports `8000-10000`.
 
 ```bash
-NDEBUG=1 ./multinode-demo/bench-tps.sh --entrypoint entrypoint.devnet.domino.com:8001 --faucet api.devnet.domino.com:9900 --duration 60 --tx_count 50
+NDEBUG=1 ./multinode-demo/bench-tps.sh --entrypoint entrypoint.devnet.dominochain.com:8001 --faucet api.devnet.dominochain.com:9900 --duration 60 --tx_count 50
 ```
 
-You can observe the effects of your client's transactions on our [metrics dashboard](https://metrics.domino.com:3000/d/monitor/cluster-telemetry?var-testnet=devnet)
+You can observe the effects of your client's transactions on our [metrics dashboard](https://metrics.dominochain.com:3000/d/monitor/cluster-telemetry?var-testnet=devnet)

@@ -3363,7 +3363,7 @@ describe('Connection', () => {
     });
 
     it('https request', async () => {
-      const connection = new Connection('https://api.mainnet-beta.domino.com');
+      const connection = new Connection('https://api.mainnet-beta.dominochain.com');
       const version = await connection.getVersion();
       expect(version['domino-core']).to.be.ok;
     });

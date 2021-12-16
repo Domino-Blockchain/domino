@@ -110,10 +110,10 @@ impl RpcClientConfig {
 ///
 /// [`Finalized`]: CommitmentLevel::Finalized
 /// [`Processed`]: CommitmentLevel::Processed
-/// [jsonprot]: https://docs.domino.com/developing/clients/jsonrpc-api
+/// [jsonprot]: https://docs.dominochain.com/developing/clients/jsonrpc-api
 /// [JSON-RPC]: https://www.jsonrpc.org/specification
-/// [slots]: https://docs.domino.com/terminology#slot
-/// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+/// [slots]: https://docs.dominochain.com/terminology#slot
+/// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
 ///
 /// # Errors
 ///
@@ -182,7 +182,7 @@ impl RpcClient {
     /// The client has a default timeout of 30 seconds, and a default [commitment
     /// level][cl] of [`Finalized`](CommitmentLevel::Finalized).
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # Examples
     ///
@@ -197,7 +197,7 @@ impl RpcClient {
 
     /// Create an HTTP `RpcClient` with specified [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// The URL is an HTTP URL, usually for port 8899, as in
     /// "http://localhost:8899".
@@ -229,7 +229,7 @@ impl RpcClient {
     /// The client has and a default [commitment level][cl] of
     /// [`Finalized`](CommitmentLevel::Finalized).
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # Examples
     ///
@@ -249,7 +249,7 @@ impl RpcClient {
 
     /// Create an HTTP `RpcClient` with specified timeout and [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// The URL is an HTTP URL, usually for port 8899, as in
     /// "http://localhost:8899".
@@ -282,7 +282,7 @@ impl RpcClient {
 
     /// Create an HTTP `RpcClient` with specified timeout and [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// The URL is an HTTP URL, usually for port 8899, as in
     /// "http://localhost:8899".
@@ -393,7 +393,7 @@ impl RpcClient {
     /// The client has a default timeout of 30 seconds, and a default [commitment
     /// level][cl] of [`Finalized`](CommitmentLevel::Finalized).
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # Examples
     ///
@@ -409,7 +409,7 @@ impl RpcClient {
 
     /// Create an HTTP `RpcClient` from a [`SocketAddr`] with specified [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// The client has a default timeout of 30 seconds, and a user-specified
     /// [`CommitmentLevel`] via [`CommitmentConfig`].
@@ -438,7 +438,7 @@ impl RpcClient {
     ///
     /// The client has a default [commitment level][cl] of [`Finalized`](CommitmentLevel::Finalized).
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # Examples
     ///
@@ -475,7 +475,7 @@ impl RpcClient {
 
     /// Get the configured default [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// The commitment config may be specified during construction, and
     /// determines how thoroughly committed a transaction must be when waiting
@@ -532,7 +532,7 @@ impl RpcClient {
     /// Once this function returns successfully, the given transaction is
     /// guaranteed to be processed with the configured [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// After sending the transaction, this method polls in a loop for the
     /// status of the transaction until it has ben confirmed.
@@ -562,8 +562,8 @@ impl RpcClient {
     /// This method is built on the [`sendTransaction`] RPC method, and the
     /// [`getLatestBlockhash`] RPC method.
     ///
-    /// [`sendTransaction`]: https://docs.domino.com/developing/clients/jsonrpc-api#sendtransaction
-    /// [`getLatestBlockhash`]: https://docs.domino.com/developing/clients/jsonrpc-api#getlatestblockhash
+    /// [`sendTransaction`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#sendtransaction
+    /// [`getLatestBlockhash`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getlatestblockhash
     ///
     /// # Examples
     ///
@@ -722,7 +722,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`sendTransaction`] RPC method.
     ///
-    /// [`sendTransaction`]: https://docs.domino.com/developing/clients/jsonrpc-api#sendtransaction
+    /// [`sendTransaction`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#sendtransaction
     ///
     /// # Examples
     ///
@@ -804,7 +804,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`sendTransaction`] RPC method.
     ///
-    /// [`sendTransaction`]: https://docs.domino.com/developing/clients/jsonrpc-api#sendtransaction
+    /// [`sendTransaction`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#sendtransaction
     ///
     /// # Examples
     ///
@@ -925,7 +925,7 @@ impl RpcClient {
     /// with the configured [commitment level][cl], which can be retrieved with
     /// the [`commitment`](RpcClient::commitment) method.
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// Note that this method does not wait for a transaction to be confirmed
     /// &mdash; it only checks whether a transaction has been confirmed. To
@@ -939,7 +939,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`getSignatureStatuses`] RPC method.
     ///
-    /// [`getSignatureStatuses`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsignaturestatuses
+    /// [`getSignatureStatuses`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsignaturestatuses
     ///
     /// # Examples
     ///
@@ -982,7 +982,7 @@ impl RpcClient {
     /// Returns an [`RpcResult`] with value `true` if the given transaction
     /// succeeded and has been committed with the given [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// Note that this method does not wait for a transaction to be confirmed
     /// &mdash; it only checks whether a transaction has been confirmed. To
@@ -996,7 +996,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`getSignatureStatuses`] RPC method.
     ///
-    /// [`getSignatureStatuses`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsignaturestatuses
+    /// [`getSignatureStatuses`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsignaturestatuses
     ///
     /// # Examples
     ///
@@ -1157,7 +1157,7 @@ impl RpcClient {
     /// Simulating a transaction is similar to the ["preflight check"] that is
     /// run by default when sending a transaction.
     ///
-    /// ["preflight check"]: https://docs.domino.com/developing/clients/jsonrpc-api#sendtransaction
+    /// ["preflight check"]: https://docs.dominochain.com/developing/clients/jsonrpc-api#sendtransaction
     ///
     /// By default, signatures are not verified during simulation. To verify
     /// signatures, call the [`simulate_transaction_with_config`] method, with
@@ -1171,7 +1171,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`simulateTransaction`] RPC method.
     ///
-    /// [`simulateTransaction`]: https://docs.domino.com/developing/clients/jsonrpc-api#simulatetransaction
+    /// [`simulateTransaction`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#simulatetransaction
     ///
     /// # Examples
     ///
@@ -1224,7 +1224,7 @@ impl RpcClient {
     /// Simulating a transaction is similar to the ["preflight check"] that is
     /// run by default when sending a transaction.
     ///
-    /// ["preflight check"]: https://docs.domino.com/developing/clients/jsonrpc-api#sendtransaction
+    /// ["preflight check"]: https://docs.dominochain.com/developing/clients/jsonrpc-api#sendtransaction
     ///
     /// By default, signatures are not verified during simulation. To verify
     /// signatures, call the [`simulate_transaction_with_config`] method, with
@@ -1247,7 +1247,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`simulateTransaction`] RPC method.
     ///
-    /// [`simulateTransaction`]: https://docs.domino.com/developing/clients/jsonrpc-api#simulatetransaction
+    /// [`simulateTransaction`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#simulatetransaction
     ///
     /// # Examples
     ///
@@ -1315,7 +1315,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getHighestSnapshotSlot`] RPC method.
     ///
-    /// [`getHighestSnapshotSlot`]: https://docs.domino.com/developing/clients/jsonrpc-api#gethighestsnapshotslot
+    /// [`getHighestSnapshotSlot`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#gethighestsnapshotslot
     ///
     /// # Examples
     ///
@@ -1351,7 +1351,7 @@ impl RpcClient {
 
     /// Check if a transaction has been processed with the default [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// If the transaction has been processed with the default commitment level,
     /// then this method returns `Ok` of `Some`. If the transaction has not yet
@@ -1377,7 +1377,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`getSignatureStatuses`] RPC method.
     ///
-    /// [`getSignatureStatuses`]: https://docs.domino.com/developing/clients/jsonrpc-api#gitsignaturestatuses
+    /// [`getSignatureStatuses`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#gitsignaturestatuses
     ///
     /// # Examples
     ///
@@ -1444,7 +1444,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getSignatureStatuses`] RPC method.
     ///
-    /// [`getSignatureStatuses`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsignaturestatuses
+    /// [`getSignatureStatuses`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsignaturestatuses
     ///
     /// # Examples
     ///
@@ -1522,7 +1522,7 @@ impl RpcClient {
     /// method, with the `searchTransactionHistory` configuration option set to
     /// `true`.
     ///
-    /// [`getSignatureStatuses`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsignaturestatuses
+    /// [`getSignatureStatuses`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsignaturestatuses
     ///
     /// # Examples
     ///
@@ -1565,7 +1565,7 @@ impl RpcClient {
 
     /// Check if a transaction has been processed with the given [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// If the transaction has been processed with the given commitment level,
     /// then this method returns `Ok` of `Some`. If the transaction has not yet
@@ -1591,7 +1591,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`getSignatureStatuses`] RPC method.
     ///
-    /// [`getSignatureStatuses`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsignaturestatuses
+    /// [`getSignatureStatuses`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsignaturestatuses
     ///
     /// # Examples
     ///
@@ -1638,7 +1638,7 @@ impl RpcClient {
 
     /// Check if a transaction has been processed with the given [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// If the transaction has been processed with the given commitment level,
     /// then this method returns `Ok` of `Some`. If the transaction has not yet
@@ -1660,7 +1660,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`getSignatureStatuses`] RPC method.
     ///
-    /// [`getSignatureStatuses`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsignaturestatuses
+    /// [`getSignatureStatuses`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsignaturestatuses
     ///
     /// # Examples
     ///
@@ -1712,13 +1712,13 @@ impl RpcClient {
 
     /// Returns the slot that has reached the configured [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getSlot`] RPC method.
     ///
-    /// [`getSlot`]: https://docs.domino.com/developing/clients/jsonrpc-api#getslot
+    /// [`getSlot`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getslot
     ///
     /// # Examples
     ///
@@ -1737,13 +1737,13 @@ impl RpcClient {
 
     /// Returns the slot that has reached the given [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getSlot`] RPC method.
     ///
-    /// [`getSlot`]: https://docs.domino.com/developing/clients/jsonrpc-api#getslot
+    /// [`getSlot`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getslot
     ///
     /// # Examples
     ///
@@ -1770,13 +1770,13 @@ impl RpcClient {
 
     /// Returns the block height that has reached the configured [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method is corresponds directly to the [`getBlockHeight`] RPC method.
     ///
-    /// [`getBlockHeight`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblockheight
+    /// [`getBlockHeight`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblockheight
     ///
     /// # Examples
     ///
@@ -1795,13 +1795,13 @@ impl RpcClient {
 
     /// Returns the block height that has reached the given [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method is corresponds directly to the [`getBlockHeight`] RPC method.
     ///
-    /// [`getBlockHeight`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblockheight
+    /// [`getBlockHeight`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblockheight
     ///
     /// # Examples
     ///
@@ -1834,7 +1834,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getSlotLeaders`] RPC method.
     ///
-    /// [`getSlotLeaders`]: https://docs.domino.com/developing/clients/jsonrpc-api#getslotleaders
+    /// [`getSlotLeaders`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getslotleaders
     ///
     /// # Examples
     ///
@@ -1874,7 +1874,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getBlockProduction`] RPC method.
     ///
-    /// [`getBlockProduction`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblockproduction
+    /// [`getBlockProduction`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblockproduction
     ///
     /// # Examples
     ///
@@ -1897,7 +1897,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getBlockProduction`] RPC method.
     ///
-    /// [`getBlockProduction`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblockproduction
+    /// [`getBlockProduction`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblockproduction
     ///
     /// # Examples
     ///
@@ -1943,13 +1943,13 @@ impl RpcClient {
     ///
     /// This method uses the configured [commitment level].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getStakeActivation`] RPC method.
     ///
-    /// [`getStakeActivation`]: https://docs.domino.com/developing/clients/jsonrpc-api#getstakeactivation
+    /// [`getStakeActivation`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getstakeactivation
     ///
     /// # Examples
     ///
@@ -2031,13 +2031,13 @@ impl RpcClient {
     ///
     /// This method uses the configured [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getSupply`] RPC method.
     ///
-    /// [`getSupply`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsupply
+    /// [`getSupply`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsupply
     ///
     /// # Examples
     ///
@@ -2060,7 +2060,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getSupply`] RPC method.
     ///
-    /// [`getSupply`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsupply
+    /// [`getSupply`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsupply
     ///
     /// # Examples
     ///
@@ -2094,7 +2094,7 @@ impl RpcClient {
     /// This method corresponds directly to the [`getLargestAccounts`] RPC
     /// method.
     ///
-    /// [`getLargestAccounts`]: https://docs.domino.com/developing/clients/jsonrpc-api#getlargestaccounts
+    /// [`getLargestAccounts`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getlargestaccounts
     ///
     /// # Examples
     ///
@@ -2133,14 +2133,14 @@ impl RpcClient {
     /// Returns the account info and associated stake for all the voting accounts
     /// that have reached the configured [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getVoteAccounts`]
     /// RPC method.
     ///
-    /// [`getVoteAccounts`]: https://docs.domino.com/developing/clients/jsonrpc-api#getvoteaccounts
+    /// [`getVoteAccounts`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getvoteaccounts
     ///
     /// # Examples
     ///
@@ -2160,13 +2160,13 @@ impl RpcClient {
     /// Returns the account info and associated stake for all the voting accounts
     /// that have reached the given [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getVoteAccounts`] RPC method.
     ///
-    /// [`getVoteAccounts`]: https://docs.domino.com/developing/clients/jsonrpc-api#getvoteaccounts
+    /// [`getVoteAccounts`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getvoteaccounts
     ///
     /// # Examples
     ///
@@ -2196,13 +2196,13 @@ impl RpcClient {
     /// Returns the account info and associated stake for all the voting accounts
     /// that have reached the given [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getVoteAccounts`] RPC method.
     ///
-    /// [`getVoteAccounts`]: https://docs.domino.com/developing/clients/jsonrpc-api#getvoteaccounts
+    /// [`getVoteAccounts`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getvoteaccounts
     ///
     /// # Examples
     ///
@@ -2278,7 +2278,7 @@ impl RpcClient {
     /// This method corresponds directly to the [`getClusterNodes`]
     /// RPC method.
     ///
-    /// [`getClusterNodes`]: https://docs.domino.com/developing/clients/jsonrpc-api#getclusternodes
+    /// [`getClusterNodes`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getclusternodes
     ///
     /// # Examples
     ///
@@ -2309,7 +2309,7 @@ impl RpcClient {
     /// This method corresponds directly to the [`getBlock`] RPC
     /// method.
     ///
-    /// [`getBlock`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblock
+    /// [`getBlock`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblock
     ///
     /// # Examples
     ///
@@ -2333,7 +2333,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getBlock`] RPC method.
     ///
-    /// [`getBlock`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblock
+    /// [`getBlock`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblock
     ///
     /// # Examples
     ///
@@ -2369,7 +2369,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getBlock`] RPC method.
     ///
-    /// [`getBlock`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblock
+    /// [`getBlock`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblock
     ///
     /// # Examples
     ///
@@ -2456,7 +2456,7 @@ impl RpcClient {
     ///
     /// [`Finalized`]: CommitmentLevel::Finalized
     /// [`get_blocks_with_limit`]: RpcClient::get_blocks_with_limit.
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # Errors
     ///
@@ -2468,8 +2468,8 @@ impl RpcClient {
     /// the remote node version is less than 1.7, in which case it maps to the
     /// [`getConfirmedBlocks`] RPC method.
     ///
-    /// [`getBlocks`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblocks
-    /// [`getConfirmedBlocks`]: https://docs.domino.com/developing/clients/jsonrpc-api#getConfirmedblocks
+    /// [`getBlocks`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblocks
+    /// [`getConfirmedBlocks`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getConfirmedblocks
     ///
     /// # Examples
     ///
@@ -2500,7 +2500,7 @@ impl RpcClient {
     /// If `end_slot` is not provided, then the end slot is for the latest
     /// block with the given [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// This method may not return blocks for the full range of slots if some
     /// slots do not have corresponding blocks. To simply get a specific number
@@ -2524,8 +2524,8 @@ impl RpcClient {
     /// the remote node version is less than 1.7, in which case it maps to the
     /// [`getConfirmedBlocks`] RPC method.
     ///
-    /// [`getBlocks`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblocks
-    /// [`getConfirmedBlocks`]: https://docs.domino.com/developing/clients/jsonrpc-api#getConfirmedblocks
+    /// [`getBlocks`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblocks
+    /// [`getConfirmedBlocks`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getConfirmedblocks
     ///
     /// # Examples
     ///
@@ -2571,7 +2571,7 @@ impl RpcClient {
     /// This method uses the [`Finalized`] [commitment level][cl].
     ///
     /// [`Finalized`]: CommitmentLevel::Finalized.
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # Errors
     ///
@@ -2583,8 +2583,8 @@ impl RpcClient {
     /// method, unless the remote node version is less than 1.7, in which case
     /// it maps to the [`getConfirmedBlocksWithLimit`] RPC method.
     ///
-    /// [`getBlocksWithLimit`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblockswithlimit
-    /// [`getConfirmedBlocksWithLimit`]: https://docs.domino.com/developing/clients/jsonrpc-api#getconfirmedblockswithlimit
+    /// [`getBlocksWithLimit`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblockswithlimit
+    /// [`getConfirmedBlocksWithLimit`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getconfirmedblockswithlimit
     ///
     /// # Examples
     ///
@@ -2616,7 +2616,7 @@ impl RpcClient {
     /// This method returns an error if the given [commitment level][cl] is below
     /// [`Confirmed`].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     /// [`Confirmed`]: CommitmentLevel::Confirmed
     ///
     /// # RPC Reference
@@ -2625,8 +2625,8 @@ impl RpcClient {
     /// method, unless the remote node version is less than 1.7, in which case
     /// it maps to the `getConfirmedBlocksWithLimit` RPC method.
     ///
-    /// [`getBlocksWithLimit`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblockswithlimit
-    /// [`getConfirmedBlocksWithLimit`]: https://docs.domino.com/developing/clients/jsonrpc-api#getconfirmedblockswithlimit
+    /// [`getBlocksWithLimit`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblockswithlimit
+    /// [`getConfirmedBlocksWithLimit`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getconfirmedblockswithlimit
     ///
     /// # Examples
     ///
@@ -2744,7 +2744,7 @@ impl RpcClient {
     /// This method uses the [`Finalized`] [commitment level][cl].
     ///
     /// [`Finalized`]: CommitmentLevel::Finalized.
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
@@ -2752,8 +2752,8 @@ impl RpcClient {
     /// method, unless the remote node version is less than 1.7, in which case
     /// it maps to the [`getSignaturesForAddress2`] RPC method.
     ///
-    /// [`getSignaturesForAddress`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsignaturesforaddress
-    /// [`getSignaturesForAddress2`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsignaturesforaddress2
+    /// [`getSignaturesForAddress`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsignaturesforaddress
+    /// [`getSignaturesForAddress2`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsignaturesforaddress2
     ///
     /// # Examples
     ///
@@ -2791,7 +2791,7 @@ impl RpcClient {
     /// This method returns an error if the given [commitment level][cl] is below
     /// [`Confirmed`].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     /// [`Confirmed`]: CommitmentLevel::Confirmed
     ///
     /// # RPC Reference
@@ -2800,8 +2800,8 @@ impl RpcClient {
     /// method, unless the remote node version is less than 1.7, in which case
     /// it maps to the [`getSignaturesForAddress2`] RPC method.
     ///
-    /// [`getSignaturesForAddress`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsignaturesforaddress
-    /// [`getSignaturesForAddress2`]: https://docs.domino.com/developing/clients/jsonrpc-api#getsignaturesforaddress2
+    /// [`getSignaturesForAddress`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsignaturesforaddress
+    /// [`getSignaturesForAddress2`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getsignaturesforaddress2
     ///
     /// # Examples
     ///
@@ -2901,7 +2901,7 @@ impl RpcClient {
     /// This method uses the [`Finalized`] [commitment level][cl].
     ///
     /// [`Finalized`]: CommitmentLevel::Finalized
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
@@ -2909,8 +2909,8 @@ impl RpcClient {
     /// unless the remote node version is less than 1.7, in which case it maps
     /// to the [`getConfirmedTransaction`] RPC method.
     ///
-    /// [`getTransaction`]: https://docs.domino.com/developing/clients/jsonrpc-api#gettransaction
-    /// [`getConfirmedTransaction`]: https://docs.domino.com/developing/clients/jsonrpc-api#getconfirmedtransaction
+    /// [`getTransaction`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#gettransaction
+    /// [`getConfirmedTransaction`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getconfirmedtransaction
     ///
     /// # Examples
     ///
@@ -2957,7 +2957,7 @@ impl RpcClient {
     /// This method returns an error if the given [commitment level][cl] is below
     /// [`Confirmed`].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     /// [`Confirmed`]: CommitmentLevel::Confirmed
     ///
     /// # RPC Reference
@@ -2966,8 +2966,8 @@ impl RpcClient {
     /// unless the remote node version is less than 1.7, in which case it maps
     /// to the [`getConfirmedTransaction`] RPC method.
     ///
-    /// [`getTransaction`]: https://docs.domino.com/developing/clients/jsonrpc-api#gettransaction
-    /// [`getConfirmedTransaction`]: https://docs.domino.com/developing/clients/jsonrpc-api#getconfirmedtransaction
+    /// [`getTransaction`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#gettransaction
+    /// [`getConfirmedTransaction`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getconfirmedtransaction
     ///
     /// # Examples
     ///
@@ -3051,7 +3051,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getBlockTime`] RPC method.
     ///
-    /// [`getBlockTime`]: https://docs.domino.com/developing/clients/jsonrpc-api#getblocktime
+    /// [`getBlockTime`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getblocktime
     ///
     /// # Examples
     ///
@@ -3087,13 +3087,13 @@ impl RpcClient {
     ///
     /// This method uses the configured default [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getEpochInfo`] RPC method.
     ///
-    /// [`getEpochInfo`]: https://docs.domino.com/developing/clients/jsonrpc-api#getepochinfo
+    /// [`getEpochInfo`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getepochinfo
     ///
     /// # Examples
     ///
@@ -3116,7 +3116,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getEpochInfo`] RPC method.
     ///
-    /// [`getEpochInfo`]: https://docs.domino.com/developing/clients/jsonrpc-api#getepochinfo
+    /// [`getEpochInfo`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getepochinfo
     ///
     /// # Examples
     ///
@@ -3147,13 +3147,13 @@ impl RpcClient {
     ///
     /// This method uses the configured default [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getLeaderSchedule`] RPC method.
     ///
-    /// [`getLeaderSchedule`]: https://docs.domino.com/developing/clients/jsonrpc-api#getleaderschedule
+    /// [`getLeaderSchedule`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getleaderschedule
     ///
     /// # Examples
     ///
@@ -3183,7 +3183,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getLeaderSchedule`] RPC method.
     ///
-    /// [`getLeaderSchedule`]: https://docs.domino.com/developing/clients/jsonrpc-api#getleaderschedule
+    /// [`getLeaderSchedule`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getleaderschedule
     ///
     /// # Examples
     ///
@@ -3222,7 +3222,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getLeaderSchedule`] RPC method.
     ///
-    /// [`getLeaderSchedule`]: https://docs.domino.com/developing/clients/jsonrpc-api#getleaderschedule
+    /// [`getLeaderSchedule`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getleaderschedule
     ///
     /// # Examples
     ///
@@ -3260,7 +3260,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getEpochSchedule`] RPC method.
     ///
-    /// [`getEpochSchedule`]: https://docs.domino.com/developing/clients/jsonrpc-api#getepochschedule
+    /// [`getEpochSchedule`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getepochschedule
     ///
     /// # Examples
     ///
@@ -3286,7 +3286,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getRecentPerformanceSamples`] RPC method.
     ///
-    /// [`getRecentPerformanceSamples`]: https://docs.domino.com/developing/clients/jsonrpc-api#getrecentperformancesamples
+    /// [`getRecentPerformanceSamples`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getrecentperformancesamples
     ///
     /// # Examples
     ///
@@ -3315,7 +3315,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getIdentity`] RPC method.
     ///
-    /// [`getIdentity`]: https://docs.domino.com/developing/clients/jsonrpc-api#getidentity
+    /// [`getIdentity`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getidentity
     ///
     /// # Examples
     ///
@@ -3344,14 +3344,14 @@ impl RpcClient {
     /// This method uses the [`Finalized`] [commitment level][cl].
     ///
     /// [`Finalized`]: CommitmentLevel::Finalized
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getInflationGovernor`] RPC
     /// method.
     ///
-    /// [`getInflationGovernor`]: https://docs.domino.com/developing/clients/jsonrpc-api#getinflationgovernor
+    /// [`getInflationGovernor`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getinflationgovernor
     ///
     /// # Examples
     ///
@@ -3374,7 +3374,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getInflationRate`] RPC method.
     ///
-    /// [`getInflationRate`]: https://docs.domino.com/developing/clients/jsonrpc-api#getinflationrate
+    /// [`getInflationRate`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getinflationrate
     ///
     /// # Examples
     ///
@@ -3395,13 +3395,13 @@ impl RpcClient {
     ///
     /// This method uses the configured [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getInflationReward`] RPC method.
     ///
-    /// [`getInflationReward`]: https://docs.domino.com/developing/clients/jsonrpc-api#getinflationreward
+    /// [`getInflationReward`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getinflationreward
     ///
     /// # Examples
     ///
@@ -3450,7 +3450,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getVersion`] RPC method.
     ///
-    /// [`getVersion`]: https://docs.domino.com/developing/clients/jsonrpc-api#getversion
+    /// [`getVersion`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getversion
     ///
     /// # Examples
     ///
@@ -3481,7 +3481,7 @@ impl RpcClient {
     /// This method corresponds directly to the [`minimumLedgerSlot`] RPC
     /// method.
     ///
-    /// [`minimumLedgerSlot`]: https://docs.domino.com/developing/clients/jsonrpc-api#minimumledgerslot
+    /// [`minimumLedgerSlot`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#minimumledgerslot
     ///
     /// # Examples
     ///
@@ -3502,7 +3502,7 @@ impl RpcClient {
     ///
     /// This method uses the configured [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// To get multiple accounts at once, use the [`get_multiple_accounts`] method.
     ///
@@ -3520,7 +3520,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`getAccountInfo`] RPC method.
     ///
-    /// [`getAccountInfo`]: https://docs.domino.com/developing/clients/jsonrpc-api#getaccountinfo
+    /// [`getAccountInfo`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getaccountinfo
     ///
     /// # Examples
     ///
@@ -3559,7 +3559,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`getAccountInfo`] RPC method.
     ///
-    /// [`getAccountInfo`]: https://docs.domino.com/developing/clients/jsonrpc-api#getaccountinfo
+    /// [`getAccountInfo`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getaccountinfo
     ///
     /// # Examples
     ///
@@ -3635,7 +3635,7 @@ impl RpcClient {
     /// This method corresponds directly to the [`getMaxRetransmitSlot`] RPC
     /// method.
     ///
-    /// [`getMaxRetransmitSlot`]: https://docs.domino.com/developing/clients/jsonrpc-api#getmaxretransmitslot
+    /// [`getMaxRetransmitSlot`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getmaxretransmitslot
     ///
     /// # Examples
     ///
@@ -3651,14 +3651,14 @@ impl RpcClient {
         self.send(RpcRequest::GetMaxRetransmitSlot, Value::Null)
     }
 
-    /// Get the max slot seen from after [shred](https://docs.domino.com/terminology#shred) insert.
+    /// Get the max slot seen from after [shred](https://docs.dominochain.com/terminology#shred) insert.
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the
     /// [`getMaxShredInsertSlot`] RPC method.
     ///
-    /// [`getMaxShredInsertSlot`]: https://docs.domino.com/developing/clients/jsonrpc-api#getmaxshredinsertslot
+    /// [`getMaxShredInsertSlot`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getmaxshredinsertslot
     ///
     /// # Examples
     ///
@@ -3678,13 +3678,13 @@ impl RpcClient {
     ///
     /// This method uses the configured [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method is built on the [`getMultipleAccounts`] RPC method.
     ///
-    /// [`getMultipleAccounts`]: https://docs.domino.com/developing/clients/jsonrpc-api#getmultipleaccounts
+    /// [`getMultipleAccounts`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getmultipleaccounts
     ///
     /// # Examples
     ///
@@ -3716,7 +3716,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`getMultipleAccounts`] RPC method.
     ///
-    /// [`getMultipleAccounts`]: https://docs.domino.com/developing/clients/jsonrpc-api#getmultipleaccounts
+    /// [`getMultipleAccounts`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getmultipleaccounts
     ///
     /// # Examples
     ///
@@ -3762,7 +3762,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`getMultipleAccounts`] RPC method.
     ///
-    /// [`getMultipleAccounts`]: https://docs.domino.com/developing/clients/jsonrpc-api#getmultipleaccounts
+    /// [`getMultipleAccounts`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getmultipleaccounts
     ///
     /// # Examples
     ///
@@ -3831,7 +3831,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`getAccountInfo`] RPC method.
     ///
-    /// [`getAccountInfo`]: https://docs.domino.com/developing/clients/jsonrpc-api#getaccountinfo
+    /// [`getAccountInfo`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getaccountinfo
     ///
     /// # Examples
     ///
@@ -3863,7 +3863,7 @@ impl RpcClient {
     /// This method corresponds directly to the
     /// [`getMinimumBalanceForRentExemption`] RPC method.
     ///
-    /// [`getMinimumBalanceForRentExemption`]: https://docs.domino.com/developing/clients/jsonrpc-api#getminimumbalanceforrentexemption
+    /// [`getMinimumBalanceForRentExemption`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getminimumbalanceforrentexemption
     ///
     /// # Examples
     ///
@@ -3898,13 +3898,13 @@ impl RpcClient {
     ///
     /// This method uses the configured [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getBalance`] RPC method.
     ///
-    /// [`getBalance`]: https://docs.domino.com/developing/clients/jsonrpc-api#getbalance
+    /// [`getBalance`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getbalance
     ///
     /// # Examples
     ///
@@ -3934,7 +3934,7 @@ impl RpcClient {
     ///
     /// This method corresponds directly to the [`getBalance`] RPC method.
     ///
-    /// [`getBalance`]: https://docs.domino.com/developing/clients/jsonrpc-api#getbalance
+    /// [`getBalance`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getbalance
     ///
     /// # Examples
     ///
@@ -3975,14 +3975,14 @@ impl RpcClient {
     ///
     /// This method uses the configured [commitment level][cl].
     ///
-    /// [cl]: https://docs.domino.com/developing/clients/jsonrpc-api#configuring-state-commitment
+    /// [cl]: https://docs.dominochain.com/developing/clients/jsonrpc-api#configuring-state-commitment
     ///
     /// # RPC Reference
     ///
     /// This method corresponds directly to the [`getProgramAccounts`] RPC
     /// method.
     ///
-    /// [`getProgramAccounts`]: https://docs.domino.com/developing/clients/jsonrpc-api#getprogramaccounts
+    /// [`getProgramAccounts`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getprogramaccounts
     ///
     /// # Examples
     ///
@@ -4019,7 +4019,7 @@ impl RpcClient {
     ///
     /// This method is built on the [`getProgramAccounts`] RPC method.
     ///
-    /// [`getProgramAccounts`]: https://docs.domino.com/developing/clients/jsonrpc-api#getprogramaccounts
+    /// [`getProgramAccounts`]: https://docs.dominochain.com/developing/clients/jsonrpc-api#getprogramaccounts
     ///
     /// # Examples
     ///

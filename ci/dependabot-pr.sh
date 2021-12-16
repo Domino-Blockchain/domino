@@ -26,7 +26,7 @@ pr_num=$(echo "$BUILDKITE_BRANCH" | grep -Eo '[0-9]+')
 branch=$(curl -s "$api_base/$pr_num" | python3 -c 'import json,sys;print(json.load(sys.stdin)["head"]["ref"])')
 
 git add :**/Cargo.lock
-EMAIL="dependabot-buildkite@noreply.domino.com" \
+EMAIL="dependabot-buildkite@noreply.dominochain.com" \
   GIT_AUTHOR_NAME="$name" \
   GIT_COMMITTER_NAME="$name" \
   git commit -m "[auto-commit] Update all Cargo lock files"

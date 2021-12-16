@@ -1,4 +1,4 @@
-pub const JSON_RPC_URL: &str = "http://api.devnet.domino.com";
+pub const JSON_RPC_URL: &str = "http://api.devnet.dominochain.com";
 
 lazy_static! {
     pub static ref CONFIG_FILE: Option<String> = {

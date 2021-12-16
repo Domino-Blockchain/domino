@@ -27,7 +27,7 @@ on devnet have **no** value, so don't worry if you lose them.
 First, _airdrop_ yourself some play tokens on the devnet.
 
 ```bash
-domino airdrop 1 <RECIPIENT_ACCOUNT_ADDRESS> --url https://api.devnet.domino.com
+domino airdrop 1 <RECIPIENT_ACCOUNT_ADDRESS> --url https://api.devnet.dominochain.com
 ```
 
 where you replace the text `<RECIPIENT_ACCOUNT_ADDRESS>` with your base58-encoded
@@ -39,7 +39,7 @@ Confirm the airdrop was successful by checking the account's balance.
 It should output `1 DOMI`:
 
 ```bash
-domino balance <ACCOUNT_ADDRESS> --url https://api.devnet.domino.com
+domino balance <ACCOUNT_ADDRESS> --url https://api.devnet.dominochain.com
 ```
 
 #### Create a second wallet address
@@ -71,7 +71,7 @@ with the private keypair corresponding to the sender's public key in the
 transaction.
 
 ```bash
-domino transfer --from <KEYPAIR> <RECIPIENT_ACCOUNT_ADDRESS> 0.5 --allow-unfunded-recipient --url https://api.devnet.domino.com --fee-payer <KEYPAIR>
+domino transfer --from <KEYPAIR> <RECIPIENT_ACCOUNT_ADDRESS> 0.5 --allow-unfunded-recipient --url https://api.devnet.dominochain.com --fee-payer <KEYPAIR>
 ```
 
 where you replace `<KEYPAIR>` with the path to a keypair in your first wallet,
@@ -81,7 +81,7 @@ wallet.
 Confirm the updated balances with `domino balance`:
 
 ```bash
-domino balance <ACCOUNT_ADDRESS> --url http://api.devnet.domino.com
+domino balance <ACCOUNT_ADDRESS> --url http://api.devnet.dominochain.com
 ```
 
 where `<ACCOUNT_ADDRESS>` is either the public key from your keypair or the
@@ -101,11 +101,11 @@ Save this seed phrase to recover your new keypair:
 width enhance concert vacant ketchup eternal spy craft spy guard tag punch    # If this was a real wallet, never share these words on the internet like this!
 ==========================================================================
 
-$ domino airdrop 1 DYw8jCTfwHNRJhhmFcbXvVDTqWMEVFBX6ZKUmG5CNSKK --url https://api.devnet.domino.com  # Airdropping 1 DOMI to my wallet's address/pubkey
+$ domino airdrop 1 DYw8jCTfwHNRJhhmFcbXvVDTqWMEVFBX6ZKUmG5CNSKK --url https://api.devnet.dominochain.com  # Airdropping 1 DOMI to my wallet's address/pubkey
 Requesting airdrop of 1 DOMI from 35.233.193.70:9900
 1 DOMI
 
-$ domino balance DYw8jCTfwHNRJhhmFcbXvVDTqWMEVFBX6ZKUmG5CNSKK --url https://api.devnet.domino.com # Check the address's balance
+$ domino balance DYw8jCTfwHNRJhhmFcbXvVDTqWMEVFBX6ZKUmG5CNSKK --url https://api.devnet.dominochain.com # Check the address's balance
 1 DOMI
 
 $ domino-keygen new --no-outfile  # Creating a second wallet, a paper wallet
@@ -118,13 +118,13 @@ Save this seed phrase to recover your new keypair:
 clump panic cousin hurt coast charge engage fall eager urge win love   # If this was a real wallet, never share these words on the internet like this!
 ====================================================================
 
-$ domino transfer --from my_domino_wallet.json 7S3P4HxJpyyigGzodYwHtCxZyUQe9JiBMHyRWXArAaKv 0.5 --allow-unfunded-recipient --url https://api.devnet.domino.com --fee-payer my_domino_wallet.json  # Transferring tokens to the public address of the paper wallet
+$ domino transfer --from my_domino_wallet.json 7S3P4HxJpyyigGzodYwHtCxZyUQe9JiBMHyRWXArAaKv 0.5 --allow-unfunded-recipient --url https://api.devnet.dominochain.com --fee-payer my_domino_wallet.json  # Transferring tokens to the public address of the paper wallet
 3gmXvykAd1nCQQ7MjosaHLf69Xyaqyq1qw2eu1mgPyYXd5G4v1rihhg1CiRw35b9fHzcftGKKEu4mbUeXY2pEX2z  # This is the transaction signature
 
-$ domino balance DYw8jCTfwHNRJhhmFcbXvVDTqWMEVFBX6ZKUmG5CNSKK --url https://api.devnet.domino.com
+$ domino balance DYw8jCTfwHNRJhhmFcbXvVDTqWMEVFBX6ZKUmG5CNSKK --url https://api.devnet.dominochain.com
 0.499995 DOMI  # The sending account has slightly less than 0.5 DOMI remaining due to the 0.000005 DOMI transaction fee payment
 
-$ domino balance 7S3P4HxJpyyigGzodYwHtCxZyUQe9JiBMHyRWXArAaKv --url https://api.devnet.domino.com
+$ domino balance 7S3P4HxJpyyigGzodYwHtCxZyUQe9JiBMHyRWXArAaKv --url https://api.devnet.dominochain.com
 0.5 DOMI  # The second wallet has now received the 0.5 DOMI transfer from the first wallet
 
 ```

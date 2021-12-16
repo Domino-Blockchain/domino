@@ -182,7 +182,7 @@ impl Pubkey {
 
     /// Find a valid [program derived address][pda] and its corresponding bump seed.
     ///
-    /// [pda]: https://docs.domino.com/developing/programming-model/calling-between-programs#program-derived-addresses
+    /// [pda]: https://docs.dominochain.com/developing/programming-model/calling-between-programs#program-derived-addresses
     ///
     /// Program derived addresses (PDAs) are account keys that only the program,
     /// `program_id`, has the authority to sign. The address is of the same form
@@ -425,7 +425,7 @@ impl Pubkey {
 
     /// Find a valid [program derived address][pda] and its corresponding bump seed.
     ///
-    /// [pda]: https://docs.domino.com/developing/programming-model/calling-between-programs#program-derived-addresses
+    /// [pda]: https://docs.dominochain.com/developing/programming-model/calling-between-programs#program-derived-addresses
     ///
     /// The only difference between this method and [`find_program_address`]
     /// is that this one returns `None` in the statistically improbable event
@@ -488,7 +488,7 @@ impl Pubkey {
 
     /// Create a valid [program derived address][pda] without searching for a bump seed.
     ///
-    /// [pda]: https://docs.domino.com/developing/programming-model/calling-between-programs#program-derived-addresses
+    /// [pda]: https://docs.dominochain.com/developing/programming-model/calling-between-programs#program-derived-addresses
     ///
     /// Because this function does not create a bump seed, it may unpredictably
     /// return an error for any given set of seeds and is not generally suitable

@@ -21,7 +21,7 @@
 
 # Domino JavaScript API
 
-This is the Domino Javascript API built on the Domino [JSON RPC API](https://docs.domino.com/apps/jsonrpc-api)
+This is the Domino Javascript API built on the Domino [JSON RPC API](https://docs.dominochain.com/apps/jsonrpc-api)
 
 [Latest API Documentation](https://domino-labs.github.io/domino-web3.js/)
 
@@ -51,7 +51,7 @@ $ npm install --save @domino/web3.js
 
 ## Development Environment Setup
 
-Install the latest Domino release from https://docs.domino.com/cli/install-domino-cli-tools
+Install the latest Domino release from https://docs.dominochain.com/cli/install-domino-cli-tools
 
 ### Run test validator
 
@@ -88,11 +88,11 @@ console.log(dominoWeb3);
 
 Example scripts for the web3.js repo and native programs:
 
-- [Web3 Examples](https://github.com/domino-labs/domino/tree/master/web3.js/examples)
+- [Web3 Examples](https://github.com/Domino-Blockchain/domino/tree/master/web3.js/examples)
 
 Example scripts for the Domino Program Library:
 
-- [Token Program Examples](https://github.com/domino-labs/domino-program-library/tree/master/token/js/examples)
+- [Token Program Examples](https://github.com/Domino-Blockchain/domino-program-library/tree/master/token/js/examples)
 
 ## Flow
 
@@ -108,7 +108,7 @@ node_modules/@domino/web3.js/module.flow.js
 
 ## Releases
 
-Releases are available on [Github](https://github.com/domino-labs/domino-web3.js/releases)
+Releases are available on [Github](https://github.com/Domino-Blockchain/domino-web3.js/releases)
 and [npmjs.com](https://www.npmjs.com/package/@domino/web3.js)
 
 Each Github release features a tarball containing API documentation and a

@@ -9,6 +9,6 @@ sudo apt-get install -y libssl-dev --allow-unauthenticated
 sudo apt-get install -y libssl1.1 --allow-unauthenticated
 clang-7 --version
 
-sh -c "$(curl -sSfL https://release.domino.com/edge/install)"
+sh -c "$(curl -sSfL https://release.dominochain.com/edge/install)"
 PATH="$HOME/.local/share/domino/install/active_release/bin:$PATH"
 domino --version

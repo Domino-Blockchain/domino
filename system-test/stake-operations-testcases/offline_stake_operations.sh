@@ -29,7 +29,7 @@ if [[ -n "$1" ]]; then
 fi
 
 if [[ -z "$url" ]]; then
-  echo Provide complete URL, ex: "$0" http://api.devnet.domino.com:8899
+  echo Provide complete URL, ex: "$0" http://api.devnet.dominochain.com:8899
   exit 1
 fi
 domino config set --url $url

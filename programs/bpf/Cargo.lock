@@ -2641,7 +2641,7 @@ dependencies = [
  "domino-measure",
  "domino-program-runtime",
  "domino-sdk",
- "domino_rbpf",
+ "solana_rbpf",
  "thiserror",
 ]
 
@@ -2668,7 +2668,7 @@ dependencies = [
  "domino-runtime",
  "domino-sdk",
  "domino-transaction-status",
- "domino_rbpf",
+ "solana_rbpf",
  "walkdir",
 ]
 
@@ -3619,7 +3619,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "domino_rbpf"
+name = "solana_rbpf"
 version = "0.2.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4b4ea641d81290842c822f1348ce9f35ff3e11d09553e709c894af9765b7934c"

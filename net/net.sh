@@ -526,7 +526,7 @@ prepareDeploy() {
     if [[ -n $releaseChannel ]]; then
       echo "Downloading release from channel: $releaseChannel"
       rm -f "$DOMINO_ROOT"/domino-release.tar.bz2
-      declare updateDownloadUrl=https://release.domino.com/"$releaseChannel"/domino-release-x86_64-unknown-linux-gnu.tar.bz2
+      declare updateDownloadUrl=https://release.dominochain.com/"$releaseChannel"/domino-release-x86_64-unknown-linux-gnu.tar.bz2
       (
         set -x
         curl -L -I "$updateDownloadUrl"

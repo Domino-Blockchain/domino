@@ -11,8 +11,8 @@ mkdir -p "$DOMINO_CONFIG_DIR"/latest-mainnet-beta-snapshot
 (
   cd "$DOMINO_CONFIG_DIR"/latest-mainnet-beta-snapshot || exit 1
   set -x
-  wget http://api.mainnet-beta.domino.com/genesis.tar.bz2
-  wget --trust-server-names http://api.mainnet-beta.domino.com/snapshot.tar.bz2
+  wget http://api.mainnet-beta.dominochain.com/genesis.tar.bz2
+  wget --trust-server-names http://api.mainnet-beta.dominochain.com/snapshot.tar.bz2
 )
 
 snapshot=$(ls "$DOMINO_CONFIG_DIR"/latest-mainnet-beta-snapshot/snapshot-[0-9]*-*.tar.zst)

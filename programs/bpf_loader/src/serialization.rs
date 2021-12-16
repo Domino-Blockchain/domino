@@ -1,6 +1,6 @@
 use {
     byteorder::{ByteOrder, LittleEndian, WriteBytesExt},
-    domino_rbpf::{aligned_memory::AlignedMemory, ebpf::HOST_ALIGN},
+    solana_rbpf::{aligned_memory::AlignedMemory, ebpf::HOST_ALIGN},
     domino_sdk::{
         account::{ReadableAccount, WritableAccount},
         bpf_loader_deprecated,

@@ -101,7 +101,7 @@ Alternatively use the Github UI.
 
 ### Create the Release Tag on GitHub
 
-1. Go to [GitHub Releases](https://github.com/domino-labs/domino/releases) for tagging a release.
+1. Go to [GitHub Releases](https://github.com/Domino-Blockchain/domino/releases) for tagging a release.
 1. Click "Draft new release".  The release tag must exactly match the `version`
    field in `/Cargo.toml` prefixed by `v`.
    1.  If the Cargo.toml version field is **0.12.3**, then the release tag must be **v0.12.3**
@@ -135,13 +135,13 @@ Alternatively use the Github UI.
 1. Open a PR against origin/vX.Y and then merge the PR after passing CI.
 
 ### Prepare for the next release
-1.  Go to [GitHub Releases](https://github.com/domino-labs/domino/releases) and create a new draft release for `X.Y.Z+1` with empty release notes.  This allows people to incrementally add new release notes until it's time for the next release
+1.  Go to [GitHub Releases](https://github.com/Domino-Blockchain/domino/releases) and create a new draft release for `X.Y.Z+1` with empty release notes.  This allows people to incrementally add new release notes until it's time for the next release
     1. Also, point the branch field to the same branch and mark the relese as **"This is a pre-release"**.
-1.  Go to the [Github Milestones](https://github.com/domino-labs/domino/milestones).  Create a new milestone for the `X.Y.Z+1`, move over
+1.  Go to the [Github Milestones](https://github.com/Domino-Blockchain/domino/milestones).  Create a new milestone for the `X.Y.Z+1`, move over
 unresolved issues still in the `X.Y.Z` milestone, then close the `X.Y.Z` milestone.
 
 ### Verify release automation success
-Go to [Domino Releases](https://github.com/domino-labs/domino/releases) and click on the latest release that you just published.
+Go to [Domino Releases](https://github.com/Domino-Blockchain/domino/releases) and click on the latest release that you just published.
 Verify that all of the build artifacts are present, then the uncheck **"This is a pre-release"** for the release.
 
 Build artifacts can take up to 60 minutes after creating the tag before
@@ -152,5 +152,5 @@ appearing.  To check for progress:
 [Crates.io](https://crates.io/crates/domino) should have an updated Domino version.  This can take 2-3 hours, and sometimes fails in the `domino-secondary` job.
 If this happens and the error is non-fatal, click "Retry" on the "publish crate" job
 
-### Update software on devnet.domino.com/testnet.domino.com/mainnet-beta.domino.com
-See the documentation at https://github.com/domino-labs/cluster-ops/
+### Update software on devnet.dominochain.com/testnet.dominochain.com/mainnet-beta.dominochain.com
+See the documentation at https://github.com/Domino-Blockchain/cluster-ops/

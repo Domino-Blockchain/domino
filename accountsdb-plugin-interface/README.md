@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://domino.com">
+  <a href="https://dominochain.com">
     <img alt="Domino" src="https://i.imgur.com/IKyzQ6T.png" width="250" />
   </a>
 </p>
@@ -15,6 +15,6 @@ instantiates the implementation of the interface.
 The `domino-accountsdb-plugin-postgres` crate provides an example of how to create a plugin which saves the accounts data into an
 external PostgreSQL databases.
 
-More information about Domino is available in the [Domino documentation](https://docs.domino.com/).
+More information about Domino is available in the [Domino documentation](https://docs.dominochain.com/).
 
 Still have questions?  Ask us on [Discord](https://discordapp.com/invite/pquxPsq)

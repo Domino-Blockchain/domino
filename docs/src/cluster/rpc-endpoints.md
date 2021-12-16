@@ -10,7 +10,7 @@ public RPC endpoints currently available and recommended for each public cluster
 
 #### Endpoint
 
-- `https://api.devnet.domino.com` - single Domino-hosted api node; rate-limited
+- `https://api.devnet.dominochain.com` - single Domino-hosted api node; rate-limited
 
 #### Rate Limits
 
@@ -24,7 +24,7 @@ public RPC endpoints currently available and recommended for each public cluster
 
 #### Endpoint
 
-- `https://api.testnet.domino.com` - single Domino-hosted api node; rate-limited
+- `https://api.testnet.dominochain.com` - single Domino-hosted api node; rate-limited
 
 #### Rate Limits
 
@@ -38,7 +38,7 @@ public RPC endpoints currently available and recommended for each public cluster
 
 #### Endpoints
 
-- `https://api.mainnet-beta.domino.com` - Domino-hosted api node cluster, backed by a load balancer; rate-limited
+- `https://api.mainnet-beta.dominochain.com` - Domino-hosted api node cluster, backed by a load balancer; rate-limited
 - `https://domino-api.projectserum.com` - Project Serum-hosted api node
 
 #### Rate Limits

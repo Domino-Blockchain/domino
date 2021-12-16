@@ -227,7 +227,7 @@ impl JsonRpcRequestProcessor {
             // BlockCommitmentCache should hold an `Arc<Bank>` everywhere it currently holds
             // a slot.
             //
-            // For more information, see https://github.com/domino-labs/domino/issues/11078
+            // For more information, see https://github.com/Domino-Blockchain/domino/issues/11078
             warn!(
                 "Bank with {:?} not found at slot: {:?}",
                 commitment.commitment, slot
@@ -1420,7 +1420,7 @@ impl JsonRpcRequestProcessor {
     ) -> Vec<Signature> {
         if self.config.enable_rpc_transaction_history {
             // TODO: Add bigtable_ledger_storage support as a part of
-            // https://github.com/domino-labs/domino/pull/10928
+            // https://github.com/Domino-Blockchain/domino/pull/10928
             let end_slot = min(
                 end_slot,
                 self.block_commitment_cache
@@ -2825,7 +2825,7 @@ pub mod rpc_accounts {
         ) -> Result<RpcStakeActivation>;
 
         // SPL Token-specific RPC endpoints
-        // See https://github.com/domino-labs/domino-program-library/releases/tag/token-v2.0.0 for
+        // See https://github.com/Domino-Blockchain/domino-program-library/releases/tag/token-v2.0.0 for
         // program details
 
         #[rpc(meta, name = "getTokenAccountBalance")]

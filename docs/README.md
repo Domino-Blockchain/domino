@@ -54,6 +54,6 @@ On each PR, the docs are built, but not published.
 In each post-commit build, docs are built and published using `vercel` to their
 respective domain depending on the build branch.
 
-- Master branch docs are published to `edge.docs.domino.com`
-- Beta branch docs are published to `beta.docs.domino.com`
-- Latest release tag docs are published to `docs.domino.com`
+- Master branch docs are published to `edge.docs.dominochain.com`
+- Beta branch docs are published to `beta.docs.dominochain.com`
+- Latest release tag docs are published to `docs.dominochain.com`

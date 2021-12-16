@@ -11,8 +11,8 @@ mkdir -p "$DOMINO_CONFIG_DIR"/latest-testnet-snapshot
 (
   cd "$DOMINO_CONFIG_DIR"/latest-testnet-snapshot || exit 1
   set -x
-  wget http://api.testnet.domino.com/genesis.tar.bz2
-  wget --trust-server-names http://testnet.domino.com/snapshot.tar.bz2
+  wget http://api.testnet.dominochain.com/genesis.tar.bz2
+  wget --trust-server-names http://testnet.dominochain.com/snapshot.tar.bz2
 )
 
 snapshot=$(ls "$DOMINO_CONFIG_DIR"/latest-testnet-snapshot/snapshot-[0-9]*-*.tar.zst)

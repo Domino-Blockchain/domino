@@ -483,7 +483,7 @@ fn build_bpf_package(config: &Config, target_directory: &Path, package: &cargo_m
         config,
         package,
         version,
-        "https://github.com/domino-labs/bpf-tools/releases/download",
+        "https://github.com/Domino-Blockchain/bpf-tools/releases/download",
         bpf_tools_download_file_name,
         &target_path,
     )

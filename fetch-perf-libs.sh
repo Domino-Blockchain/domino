@@ -27,7 +27,7 @@ if [[ $VERSION != "$(cat target/perf-libs/.version 2> /dev/null)" ]]; then
       cp ~/.cache/domino-perf-$PERF_LIBS_VERSION.tgz domino-perf.tgz
     else
       curl -L --retry 5 --retry-delay 2 --retry-connrefused -o domino-perf.tgz \
-        https://github.com/domino-labs/domino-perf-libs/releases/download/$PERF_LIBS_VERSION/domino-perf.tgz
+        https://github.com/Domino-Blockchain/domino-perf-libs/releases/download/$PERF_LIBS_VERSION/domino-perf.tgz
     fi
     tar zxvf domino-perf.tgz
 

@@ -213,9 +213,9 @@ where
 
 pub fn normalize_to_url_if_moniker<T: AsRef<str>>(url_or_moniker: T) -> String {
     match url_or_moniker.as_ref() {
-        "m" | "mainnet-beta" => "https://api.mainnet-beta.domino.com",
-        "t" | "testnet" => "https://api.testnet.domino.com",
-        "d" | "devnet" => "https://api.devnet.domino.com",
+        "m" | "mainnet-beta" => "https://api.mainnet-beta.dominochain.com",
+        "t" | "testnet" => "https://api.testnet.dominochain.com",
+        "d" | "devnet" => "https://api.devnet.dominochain.com",
         "l" | "localhost" => "http://localhost:8899",
         url => url,
     }

@@ -46,7 +46,7 @@ $ softwareupdate --install-rosetta
 ## **2. Download the source code.**
 
 ```bash
-$ git clone https://github.com/domino-labs/domino.git
+$ git clone https://github.com/Domino-Blockchain/domino.git
 $ cd domino
 ```
 
@@ -65,11 +65,11 @@ $ cargo test
 ```
 
 ### Starting a local testnet
-Start your own testnet locally, instructions are in the [online docs](https://docs.domino.com/cluster/bench-tps).
+Start your own testnet locally, instructions are in the [online docs](https://docs.dominochain.com/cluster/bench-tps).
 
 ### Accessing the remote development cluster
 * `devnet` - stable public cluster for development accessible via
-devnet.domino.com. Runs 24/7. Learn more about the [public clusters](https://docs.domino.com/clusters)
+devnet.dominochain.com. Runs 24/7. Learn more about the [public clusters](https://docs.dominochain.com/clusters)
 
 # Benchmarking
 

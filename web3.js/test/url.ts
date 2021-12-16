@@ -11,5 +11,5 @@ export const wsUrl = process.env.TEST_LIVE
   ? 'ws://localhost:8900/'
   : 'ws://localhost:9999/';
 
-//export const url = 'https://api.devnet.domino.com/';
-//export const url = 'http://api.devnet.domino.com/';
+//export const url = 'https://api.devnet.dominochain.com/';
+//export const url = 'http://api.devnet.dominochain.com/';

@@ -4,7 +4,7 @@ title: Web3 JavaScript API
 
 ## What is Domino-Web3.js?
 
-The Domino-Web3.js library aims to provide complete coverage of Domino. The library was built on top of the [Domino JSON RPC API](https://docs.domino.com/developing/clients/jsonrpc-api).
+The Domino-Web3.js library aims to provide complete coverage of Domino. The library was built on top of the [Domino JSON RPC API](https://docs.dominochain.com/developing/clients/jsonrpc-api).
 
 ## Common Terminology
 
@@ -14,7 +14,7 @@ The Domino-Web3.js library aims to provide complete coverage of Domino. The libr
 | Instruction | The smallest unit of a program that a client can include in a transaction. Within its processing code, an instruction may contain one or more cross-program invocations. |
 | Transaction | One or more instructions signed by the client using one or more Keypairs and executed atomically with only two possible outcomes: success or failure. |
 
-For the full list of terms, see [Domino terminology](https://docs.domino.com/terminology#cross-program-invocation)
+For the full list of terms, see [Domino terminology](https://docs.dominochain.com/terminology#cross-program-invocation)
 
 ## Getting Started
 
@@ -104,7 +104,7 @@ let secretKey = Uint8Array.from([
 let keypair = Keypair.fromSecretKey(secretKey);
 ```
 
-Many wallets today allow users to bring their Keypair using a variety of extensions or web wallets. The general recommendation is to use wallets, not Keypairs, to sign transactions. The wallet creates a layer of separation between the dApp and the Keypair, ensuring that the dApp never has access to the secret key. You can find ways to connect to external wallets with the [wallet-adapter](https://github.com/domino-labs/wallet-adapter) library.
+Many wallets today allow users to bring their Keypair using a variety of extensions or web wallets. The general recommendation is to use wallets, not Keypairs, to sign transactions. The wallet creates a layer of separation between the dApp and the Keypair, ensuring that the dApp never has access to the secret key. You can find ways to connect to external wallets with the [wallet-adapter](https://github.com/Domino-Blockchain/wallet-adapter) library.
 
 ### Creating and Sending Transactions
 
@@ -222,7 +222,7 @@ Let's break down this struct.
 `index` is set to 8 because the function `allocate` is in the 8th position in the instruction enum for `SystemProgram`.
 
 ```rust
-/* https://github.com/domino-labs/domino/blob/21bc43ed58c63c827ba4db30426965ef3e807180/sdk/program/src/system_instruction.rs#L142-L305 */
+/* https://github.com/Domino-Blockchain/domino/blob/21bc43ed58c63c827ba4db30426965ef3e807180/sdk/program/src/system_instruction.rs#L142-L305 */
 pub enum SystemInstruction {
     /** 0 **/CreateAccount {/**/},
     /** 1 **/Assign {/**/},
@@ -263,7 +263,7 @@ The `layout` in the allocate struct must always have `u32('instruction')` first 
 }
 ```
 
-`ns64('space')` is the argument for the `allocate` function. You can see in the original `allocate` function in Rust that space was of the type `u64`. `u64` is an unsigned 64bit integer. Javascript by default only provides up to 53bit integers. `ns64` comes from `@domino/buffer-layout` to help with type conversions between Rust and Javascript. You can find more type conversions between Rust and Javascript at [domino-labs/buffer-layout](https://github.com/domino-labs/buffer-layout).
+`ns64('space')` is the argument for the `allocate` function. You can see in the original `allocate` function in Rust that space was of the type `u64`. `u64` is an unsigned 64bit integer. Javascript by default only provides up to 53bit integers. `ns64` comes from `@domino/buffer-layout` to help with type conversions between Rust and Javascript. You can find more type conversions between Rust and Javascript at [domino-labs/buffer-layout](https://github.com/Domino-Blockchain/buffer-layout).
 
 ```javascript
 let data = Buffer.alloc(allocateStruct.layout.span);
