@@ -3,9 +3,9 @@ name = "domino-runtime"
 version = "1.10.0"
 description = "Domino runtime"
 authors = ["Domino Maintainers <maintainers@domino.foundation>"]
-repository = "https://github.com/domino-labs/domino"
+repository = "https://github.com/Domino-Blockchain/domino"
 license = "Apache-2.0"
-homepage = "https://domino.com/"
+homepage = "https://dominochain.com/"
 documentation = "https://docs.rs/domino-runtime"
 edition = "2021"
 

@@ -16,7 +16,7 @@
 { # this ensures the entire script is downloaded #
 
 if [ -z "$DOMINO_DOWNLOAD_ROOT" ]; then
-    DOMINO_DOWNLOAD_ROOT="https://github.com/domino-labs/domino/releases/download/"
+    DOMINO_DOWNLOAD_ROOT="https://github.com/Domino-Blockchain/domino/releases/download/"
 fi
 GH_LATEST_RELEASE="https://api.github.com/repos/domino-labs/domino/releases/latest"
 

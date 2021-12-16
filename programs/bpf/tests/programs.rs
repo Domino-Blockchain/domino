@@ -19,7 +19,7 @@ use domino_bpf_rust_realloc::instructions::*;
 use domino_bpf_rust_realloc_invoke::instructions::*;
 use domino_cli_output::display::println_transaction;
 use domino_program_runtime::invoke_context::with_mock_invoke_context;
-use domino_rbpf::{
+use solana_rbpf::{
     elf::Executable,
     static_analysis::Analysis,
     vm::{Config, Tracer},

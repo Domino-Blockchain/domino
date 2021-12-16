@@ -25,7 +25,7 @@ use {
         tpu_client::{TpuClient, TpuClientConfig},
     },
     domino_program_runtime::invoke_context::InvokeContext,
-    domino_rbpf::{elf::Executable, verifier, vm::Config},
+    solana_rbpf::{elf::Executable, verifier, vm::Config},
     domino_remote_wallet::remote_wallet::RemoteWalletManager,
     domino_sdk::{
         account::Account,

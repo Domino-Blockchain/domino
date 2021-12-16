@@ -2,9 +2,9 @@
 name = "domino-compute-budget-program"
 description = "Domino Compute Budget program"
 version = "1.10.0"
-homepage = "https://domino.com/"
+homepage = "https://dominochain.com/"
 documentation = "https://docs.rs/domino-compute-budget-program"
-repository = "https://github.com/domino-labs/domino"
+repository = "https://github.com/Domino-Blockchain/domino"
 authors = ["Domino Maintainers <maintainers@domino.foundation>"]
 license = "Apache-2.0"
 edition = "2021"

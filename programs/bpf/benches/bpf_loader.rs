@@ -12,7 +12,7 @@ use domino_bpf_loader_program::{
 };
 use domino_measure::measure::Measure;
 use domino_program_runtime::invoke_context::with_mock_invoke_context;
-use domino_rbpf::{
+use solana_rbpf::{
     elf::Executable,
     vm::{Config, InstructionMeter, SyscallRegistry},
 };

@@ -243,7 +243,7 @@ full_page_writes = off                 # recover from partial page writes
 max_wal_senders = 0                    # max number of walsender processes
 ```
 
-The sample [postgresql.conf](https://github.com/domino-labs/domino/blob/7ac43b16d2c766df61ae0a06d7aaf14ba61996ac/accountsdb-plugin-postgres/scripts/postgresql.conf)
+The sample [postgresql.conf](https://github.com/Domino-Blockchain/domino/blob/7ac43b16d2c766df61ae0a06d7aaf14ba61996ac/accountsdb-plugin-postgres/scripts/postgresql.conf)
 can be used for reference.
 
 ### Create the Database Instance and the Role
@@ -276,7 +276,7 @@ psql -U domino -p 5433 -h 10.138.0.9 -w -d domino
 
 ### Create the Schema Objects
 
-Use the [create_schema.sql](https://github.com/domino-labs/domino/blob/7ac43b16d2c766df61ae0a06d7aaf14ba61996ac/accountsdb-plugin-postgres/scripts/create_schema.sql)
+Use the [create_schema.sql](https://github.com/Domino-Blockchain/domino/blob/7ac43b16d2c766df61ae0a06d7aaf14ba61996ac/accountsdb-plugin-postgres/scripts/create_schema.sql)
 to create the objects for storing accounts and slots.
 
 Download the script from github:
@@ -297,7 +297,7 @@ argument mentioned above.
 ### Destroy the Schema Objects
 
 To destroy the database objects, created by `create_schema.sql`, use
-[drop_schema.sql](https://github.com/domino-labs/domino/blob/7ac43b16d2c766df61ae0a06d7aaf14ba61996ac/accountsdb-plugin-postgres/scripts/drop_schema.sql).
+[drop_schema.sql](https://github.com/Domino-Blockchain/domino/blob/7ac43b16d2c766df61ae0a06d7aaf14ba61996ac/accountsdb-plugin-postgres/scripts/drop_schema.sql).
 For example,
 
 ```

@@ -60,7 +60,7 @@ edge|beta)
   DOWNLOAD_URL=https://release.domino.com/"$TAG"/domino-release-$TARGET.tar.bz2
   ;;
 *)
-  DOWNLOAD_URL=https://github.com/domino-labs/domino/releases/download/"$TAG"/domino-release-$TARGET.tar.bz2
+  DOWNLOAD_URL=https://github.com/Domino-Blockchain/domino/releases/download/"$TAG"/domino-release-$TARGET.tar.bz2
   ;;
 esac
 

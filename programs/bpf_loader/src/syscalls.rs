@@ -8,7 +8,7 @@ use {
         invoke_context::{ComputeMeter, InvokeContext},
         stable_log,
     },
-    domino_rbpf::{
+    solana_rbpf::{
         aligned_memory::AlignedMemory,
         ebpf,
         error::EbpfError,
@@ -2669,7 +2669,7 @@ mod tests {
     use {
         super::*,
         domino_program_runtime::invoke_context::InvokeContext,
-        domino_rbpf::{
+        solana_rbpf::{
             ebpf::HOST_ALIGN, memory_region::MemoryRegion, user_error::UserError, vm::Config,
         },
         domino_sdk::{

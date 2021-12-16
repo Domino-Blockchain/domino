@@ -4,7 +4,7 @@ description = "Domino Program Test Framework"
 edition = "2021"
 license = "Apache-2.0"
 name = "domino-program-test"
-repository = "https://github.com/domino-labs/domino"
+repository = "https://github.com/Domino-Blockchain/domino"
 version = "1.10.0"
 
 [dependencies]

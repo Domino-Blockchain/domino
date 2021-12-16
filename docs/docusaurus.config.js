@@ -87,7 +87,7 @@ module.exports = {
           position: "right",
         },
         {
-          href: "https://github.com/domino-labs/domino",
+          href: "https://github.com/Domino-Blockchain/domino",
           label: "GitHub",
           position: "right",
         },
@@ -133,7 +133,7 @@ module.exports = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/domino-labs/domino",
+              href: "https://github.com/Domino-Blockchain/domino",
             },
           ],
         },

@@ -4,9 +4,9 @@ edition = "2021"
 name = "domino-cli"
 description = "Blockchain, Rebuilt for Scale"
 version = "1.10.0"
-repository = "https://github.com/domino-labs/domino"
+repository = "https://github.com/Domino-Blockchain/domino"
 license = "Apache-2.0"
-homepage = "https://domino.com/"
+homepage = "https://dominochain.com/"
 documentation = "https://docs.rs/domino-cli"
 
 [dependencies]
@@ -36,7 +36,7 @@ domino-config-program = { path = "../programs/config", version = "=1.10.0" }
 domino-faucet = { path = "../faucet", version = "=1.10.0" }
 domino-logger = { path = "../logger", version = "=1.10.0" }
 domino-program-runtime = { path = "../program-runtime", version = "=1.10.0" }
-domino_rbpf = "=0.2.19"
+solana_rbpf = "=0.2.19"
 domino-remote-wallet = { path = "../remote-wallet", version = "=1.10.0" }
 domino-sdk = { path = "../sdk", version = "=1.10.0" }
 domino-transaction-status = { path = "../transaction-status", version = "=1.10.0" }

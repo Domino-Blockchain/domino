@@ -4,9 +4,9 @@ description = "Blockchain, Rebuilt for Scale"
 authors = ["Domino Maintainers <maintainers@domino.foundation>"]
 edition = "2021"
 version = "1.10.0"
-repository = "https://github.com/domino-labs/domino"
+repository = "https://github.com/Domino-Blockchain/domino"
 license = "Apache-2.0"
-homepage = "https://domino.com/"
+homepage = "https://dominochain.com/"
 documentation = "https://docs.rs/domino-stake-accounts"
 
 [dependencies]
