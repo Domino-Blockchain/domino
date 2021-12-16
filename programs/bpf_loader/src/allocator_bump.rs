@@ -1,7 +1,7 @@
 use {
     crate::alloc,
     alloc::{Alloc, AllocErr},
-    domino_rbpf::aligned_memory::AlignedMemory,
+    solana_rbpf::aligned_memory::AlignedMemory,
     std::alloc::Layout,
 };
 

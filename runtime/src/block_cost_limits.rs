@@ -16,7 +16,7 @@ pub const MAX_BLOCK_REPLAY_TIME_US: u64 = 400_000;
 /// number of concurrent processes,
 pub const MAX_CONCURRENCY: u64 = 10;
 
-/// Cluster data, method of collecting at https://github.com/domino-labs/domino/issues/19627
+/// Cluster data, method of collecting at https://github.com/Domino-Blockchain/domino/issues/19627
 /// Dashboard: https://metrics.domino.com:8889/sources/0/dashboards/10?refresh=Paused&lower=now%28%29%20-%2012h
 ///
 /// cluster avergaed compute unit to microsec conversion rate

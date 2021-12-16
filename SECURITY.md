@@ -54,7 +54,7 @@ Eligibility:
 * The participant submitting the bug report shall follow the process outlined within this document
 * Valid exploits can be eligible even if they are not successfully executed on the cluster
 * Multiple submissions for the same class of exploit are still eligible for compensation, though may be compensated at a lower rate, however these will be assessed on a case-by-case basis
-* Participants must complete KYC and sign the participation agreement here when the registrations are open https://domino.com/validator-registration. Security exploits will still be assessed and open for submission at all times. This needs only be done prior to distribution of tokens.
+* Participants must complete KYC and sign the participation agreement here when the registrations are open https://dominochain.com/validator-registration. Security exploits will still be assessed and open for submission at all times. This needs only be done prior to distribution of tokens.
 
 Payment of Bug Bounties:
 * Payments for eligible bug reports are distributed monthly.
@@ -69,7 +69,7 @@ following month.
   payouts is the Close price on 2021-03-31 of $19.49.  This applies to all bugs
   submitted in March 2021, to be paid in mid-April 2021.
 * Bug bounties are paid out in
-[stake accounts](https://domino.com/staking) with a
+[stake accounts](https://dominochain.com/staking) with a
 [lockup](https://docs.domino.com/staking/stake-accounts#lockups)
 expiring 12 months from the last day of the month in which the bug was submitted.
 
@@ -81,7 +81,7 @@ followed to contain, respond and remediate:
 
 ### 1. Establish a new draft security advisory
 In response to an email to security@domino.com, a member of the `domino-labs/admins` group will
-1. Create a new draft security advisory for the incident at https://github.com/domino-labs/domino/security/advisories
+1. Create a new draft security advisory for the incident at https://github.com/Domino-Blockchain/domino/security/advisories
 1. Add the reporter's github user and the `domino-labs/security-incident-response` group to the draft security advisory
 1. Create a private fork of the repository (grey button towards the bottom of the page)
 1. Respond to the reporter by email, sharing a link to the draft security advisory

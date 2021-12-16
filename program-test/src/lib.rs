@@ -470,7 +470,7 @@ impl Default for ProgramTest {
     ///
     fn default() -> Self {
         domino_logger::setup_with_default(
-            "domino_rbpf::vm=debug,\
+            "solana_rbpf::vm=debug,\
              domino_runtime::message_processor=debug,\
              domino_runtime::system_instruction_processor=trace,\
              domino_program_test=info",

@@ -566,7 +566,7 @@ pub fn init(
 
 fn github_release_download_url(release_semver: &str) -> String {
     format!(
-        "https://github.com/domino-labs/domino/releases/download/v{}/domino-release-{}.tar.bz2",
+        "https://github.com/Domino-Blockchain/domino/releases/download/v{}/domino-release-{}.tar.bz2",
         release_semver,
         crate::build_env::TARGET
     )

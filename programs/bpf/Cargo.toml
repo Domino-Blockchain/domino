@@ -1,11 +1,11 @@
 [package]
 name = "domino-bpf-programs"
-description = "Blockchain, Rebuilt for Scale"
+description = "Domino Blockchain"
 version = "1.10.0"
 documentation = "https://docs.rs/domino"
-homepage = "https://domino.com/"
+homepage = "https://dominochain.com/"
 readme = "README.md"
-repository = "https://github.com/domino-labs/domino"
+repository = "https://github.com/Domino-Blockchain/domino"
 authors = ["Domino Maintainers <maintainers@domino.foundation>"]
 license = "Apache-2.0"
 edition = "2021"
@@ -33,7 +33,7 @@ domino-bpf-rust-realloc-invoke = { path = "rust/realloc_invoke", version = "=1.1
 domino-cli-output = { path = "../../cli-output", version = "=1.10.0" }
 domino-logger = { path = "../../logger", version = "=1.10.0" }
 domino-measure = { path = "../../measure", version = "=1.10.0" }
-domino_rbpf = "=0.2.19"
+solana_rbpf = "=0.2.19"
 domino-runtime = { path = "../../runtime", version = "=1.10.0" }
 domino-program-runtime = { path = "../../program-runtime", version = "=1.10.0" }
 domino-sdk = { path = "../../sdk", version = "=1.10.0" }

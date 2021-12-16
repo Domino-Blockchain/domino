@@ -2,11 +2,11 @@
 authors = ["Domino Maintainers <maintainers@domino.com>"]
 description = "Blockchain, Rebuilt for Scale"
 edition = "2021"
-homepage = "https://domino.com/"
+homepage = "https://dominochain.com/"
 license = "Apache-2.0"
 name = "proto"
 publish = false
-repository = "https://github.com/domino-labs/domino"
+repository = "https://github.com/Domino-Blockchain/domino"
 version = "1.10.0"
 
 [workspace]

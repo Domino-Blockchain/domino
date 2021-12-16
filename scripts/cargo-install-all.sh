@@ -114,7 +114,7 @@ else
   fi
 
   #XXX: Ensure `domino-genesis` is built LAST!
-  # See https://github.com/domino-labs/domino/issues/5826
+  # See https://github.com/Domino-Blockchain/domino/issues/5826
   BINS+=(domino-genesis)
 fi
 

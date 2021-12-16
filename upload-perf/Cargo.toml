@@ -3,10 +3,10 @@ name = "domino-upload-perf"
 version = "1.10.0"
 description = "Metrics Upload Utility"
 authors = ["Domino Maintainers <maintainers@domino.foundation>"]
-repository = "https://github.com/domino-labs/domino"
+repository = "https://github.com/Domino-Blockchain/domino"
 license = "Apache-2.0"
 edition = "2021"
-homepage = "https://domino.com/"
+homepage = "https://dominochain.com/"
 publish = false
 
 [dependencies]

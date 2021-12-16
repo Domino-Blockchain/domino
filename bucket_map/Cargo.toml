@@ -2,10 +2,10 @@
 name = "domino-bucket-map"
 version = "1.10.0"
 description = "domino-bucket-map"
-homepage = "https://domino.com/"
+homepage = "https://dominochain.com/"
 documentation = "https://docs.rs/domino-bucket-map"
 readme = "../README.md"
-repository = "https://github.com/domino-labs/domino"
+repository = "https://github.com/Domino-Blockchain/domino"
 authors = ["Domino Maintainers <maintainers@domino.foundation>"]
 license = "Apache-2.0"
 edition = "2021"

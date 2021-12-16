@@ -7,7 +7,7 @@ use {
         ThisInstructionMeter,
     },
     domino_program_runtime::invoke_context::{prepare_mock_invoke_context, InvokeContext},
-    domino_rbpf::{
+    solana_rbpf::{
         assembler::assemble,
         elf::Executable,
         static_analysis::Analysis,

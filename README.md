@@ -47,7 +47,7 @@ $ softwareupdate --install-rosetta
 ## **2. Download the source code.**
 
 ```bash
-$ git clone https://github.com/domino-labs/domino.git
+$ git clone https://github.com/Domino-Blockchain/domino/domino.git
 $ cd domino
 ```
 

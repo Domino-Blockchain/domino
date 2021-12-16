@@ -336,7 +336,7 @@ less disk usage may be requested by adding an argument to `--limit-ledger-size`
 if desired. Check `domino-validator --help` for the default limit value used by
 `--limit-ledger-size`. More information about
 selecting a custom limit value is [available
-here](https://github.com/domino-labs/domino/blob/583cec922b6107e0f85c7e14cb5e642bc7dfb340/core/src/ledger_cleanup_service.rs#L15-L26).
+here](https://github.com/Domino-Blockchain/domino/blob/583cec922b6107e0f85c7e14cb5e642bc7dfb340/core/src/ledger_cleanup_service.rs#L15-L26).
 
 ### Systemd Unit
 

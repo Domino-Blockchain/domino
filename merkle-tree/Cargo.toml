@@ -3,9 +3,9 @@ name = "domino-merkle-tree"
 version = "1.10.0"
 description = "Domino Merkle Tree"
 authors = ["Domino Maintainers <maintainers@domino.foundation>"]
-repository = "https://github.com/domino-labs/domino"
+repository = "https://github.com/Domino-Blockchain/domino"
 license = "Apache-2.0"
-homepage = "https://domino.com/"
+homepage = "https://dominochain.com/"
 documentation = "https://docs.rs/domino-merkle-tree"
 edition = "2021"
 

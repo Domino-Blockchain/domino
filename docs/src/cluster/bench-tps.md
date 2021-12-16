@@ -6,16 +6,16 @@ The Domino git repository contains all the scripts you might need to spin up you
 
 For all four variations, you'd need the latest Rust toolchain and the Domino source code:
 
-First, setup Rust, Cargo and system packages as described in the Domino [README](https://github.com/domino-labs/domino#1-install-rustc-cargo-and-rustfmt)
+First, setup Rust, Cargo and system packages as described in the Domino [README](https://github.com/Domino-Blockchain/domino#1-install-rustc-cargo-and-rustfmt)
 
 Now checkout the code from github:
 
 ```bash
-git clone https://github.com/domino-labs/domino.git
+git clone https://github.com/Domino-Blockchain/domino.git
 cd domino
 ```
 
-The demo code is sometimes broken between releases as we add new low-level features, so if this is your first time running the demo, you'll improve your odds of success if you check out the [latest release](https://github.com/domino-labs/domino/releases) before proceeding:
+The demo code is sometimes broken between releases as we add new low-level features, so if this is your first time running the demo, you'll improve your odds of success if you check out the [latest release](https://github.com/Domino-Blockchain/domino/releases) before proceeding:
 
 ```bash
 TAG=$(git describe --tags $(git rev-list --tags --max-count=1))

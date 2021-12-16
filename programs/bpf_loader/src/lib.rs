@@ -21,7 +21,7 @@ use {
         log_collector::LogCollector,
         stable_log,
     },
-    domino_rbpf::{
+    solana_rbpf::{
         aligned_memory::AlignedMemory,
         ebpf::HOST_ALIGN,
         elf::Executable,
@@ -962,7 +962,7 @@ pub struct BpfExecutor {
     executable: Pin<Box<Executable<BpfError, ThisInstructionMeter>>>,
 }
 
-// Well, implement Debug for domino_rbpf::vm::Executable in domino-rbpf...
+// Well, implement Debug for solana_rbpf::vm::Executable in domino-rbpf...
 impl Debug for BpfExecutor {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         write!(f, "BpfExecutor({:p})", self)
@@ -1093,7 +1093,7 @@ mod tests {
         super::*,
         rand::Rng,
         domino_program_runtime::invoke_context::mock_process_instruction,
-        domino_rbpf::vm::SyscallRegistry,
+        solana_rbpf::vm::SyscallRegistry,
         domino_runtime::{bank::Bank, bank_client::BankClient},
         domino_sdk::{
             account::{
@@ -1169,7 +1169,7 @@ mod tests {
         ];
         let input = &mut [0x00];
         let mut bpf_functions = std::collections::BTreeMap::<u32, (usize, String)>::new();
-        domino_rbpf::elf::register_bpf_function(&mut bpf_functions, 0, "entrypoint", false)
+        solana_rbpf::elf::register_bpf_function(&mut bpf_functions, 0, "entrypoint", false)
             .unwrap();
         let program = Executable::<BpfError, TestInstructionMeter>::from_text_bytes(
             program,

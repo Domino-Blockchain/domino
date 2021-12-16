@@ -30,7 +30,7 @@ $ curl -sSf https://raw.githubusercontent.com/domino-labs/domino/v1.0.0/install/
 With a well-known release URL, a pre-built binary can be obtained for supported platforms:
 
 ```bash
-$ curl -o domino-install-init https://github.com/domino-labs/domino/releases/download/v1.0.0/domino-install-init-x86_64-apple-darwin
+$ curl -o domino-install-init https://github.com/Domino-Blockchain/domino/releases/download/v1.0.0/domino-install-init-x86_64-apple-darwin
 $ chmod +x ./domino-install-init
 $ ./domino-install-init --help
 ```
@@ -40,7 +40,7 @@ $ ./domino-install-init --help
 If a pre-built binary is not available for a given platform, building the installer from source is always an option:
 
 ```bash
-$ git clone https://github.com/domino-labs/domino.git
+$ git clone https://github.com/Domino-Blockchain/domino.git
 $ cd domino/install
 $ cargo run -- --help
 ```

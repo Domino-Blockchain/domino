@@ -148,7 +148,7 @@ fn dummy_process_instruction(
 /// This is to enable the runtime to determine categorically whether the builtin update has
 /// occurred, and preserve idempotency in Bank::add_native_program across genesis, snapshot, and
 /// normal child Bank creation.
-/// https://github.com/domino-labs/domino/blob/84b139cc94b5be7c9e0c18c2ad91743231b85a0d/runtime/src/bank.rs#L1723
+/// https://github.com/Domino-Blockchain/domino/blob/84b139cc94b5be7c9e0c18c2ad91743231b85a0d/runtime/src/bank.rs#L1723
 fn feature_builtins() -> Vec<(Builtin, Pubkey, ActivationType)> {
     vec![
         (
