@@ -5,7 +5,7 @@ use {
     },
     domino_sdk::pubkey::Pubkey,
     spl_token::{
-        domino_program::{
+        solana_program::{
             program_option::COption, program_pack::Pack, pubkey::Pubkey as SplTokenPubkey,
         },
         state::{Account, AccountState, Mint, Multisig},
