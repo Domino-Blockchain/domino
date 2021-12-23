@@ -39,7 +39,7 @@ use {
     },
     domino_transaction_status::TransactionStatus,
     spl_associated_token_account::get_associated_token_address,
-    spl_token::domino_program::program_error::ProgramError,
+    spl_token::solana_program::program_error::ProgramError,
     std::{
         cmp::{self},
         io,
@@ -222,7 +222,7 @@ fn distribution_instructions(
                         new_stake_account_address,
                         &authorized,
                         &lockup,
-                        allocation.amount - unlocked_dom,
+                        allocation.amount - unlocked_domi,
                     )
                 }
 
@@ -234,7 +234,7 @@ fn distribution_instructions(
                     let mut instructions = stake_instruction::split(
                         &sender_stake_args.stake_account_address,
                         &stake_authority,
-                        allocation.amount - unlocked_dom,
+                        allocation.amount - unlocked_domi,
                         new_stake_account_address,
                     );
 
@@ -278,7 +278,7 @@ fn distribution_instructions(
             instructions.push(system_instruction::transfer(
                 &sender_pubkey,
                 &recipient,
-                unlocked_dom,
+                unlocked_domi,
             ));
 
             instructions
@@ -745,9 +745,9 @@ fn check_payer_balances(
         .iter()
         .sum();
 
-    let (distribution_source, unlocked_dom_source) = if let Some(stake_args) = &args.stake_args {
+    let (distribution_source, unlocked_domi_source) = if let Some(stake_args) = &args.stake_args {
         let total_unlocked_domi = allocations.len() as u64 * stake_args.unlocked_dom;
-        undistributed_tokens -= total_unlocked_dom;
+        undistributed_tokens -= total_unlocked_domi;
         let from_pubkey = if let Some(sender_stake_args) = &stake_args.sender_stake_args {
             sender_stake_args.stake_account_address
         } else {
@@ -755,14 +755,14 @@ fn check_payer_balances(
         };
         (
             from_pubkey,
-            Some((args.sender_keypair.pubkey(), total_unlocked_dom)),
+            Some((args.sender_keypair.pubkey(), total_unlocked_domi)),
         )
     } else {
         (args.sender_keypair.pubkey(), None)
     };
 
     let fee_payer_balance = client.get_balance(&args.fee_payer.pubkey())?;
-    if let Some((unlocked_dom_source, total_unlocked_dom)) = unlocked_dom_source {
+    if let Some((unlocked_domi_source, total_unlocked_domi)) = unlocked_domi_source {
         let staker_balance = client.get_balance(&distribution_source)?;
         if staker_balance < undistributed_tokens {
             return Err(Error::InsufficientFunds(
@@ -770,11 +770,11 @@ fn check_payer_balances(
                 lamports_to_dom(undistributed_tokens).to_string(),
             ));
         }
-        if args.fee_payer.pubkey() == unlocked_dom_source {
+        if args.fee_payer.pubkey() == unlocked_domi_source {
             if fee_payer_balance < fees + total_unlocked_domi {
                 return Err(Error::InsufficientFunds(
                     vec![FundingSource::SystemAccount, FundingSource::FeePayer].into(),
-                    lamports_to_dom(fees + total_unlocked_dom).to_string(),
+                    lamports_to_dom(fees + total_unlocked_domi).to_string(),
                 ));
             }
         } else {
@@ -784,11 +784,11 @@ fn check_payer_balances(
                     lamports_to_dom(fees).to_string(),
                 ));
             }
-            let unlocked_dom_balance = client.get_balance(&unlocked_dom_source)?;
-            if unlocked_dom_balance < total_unlocked_domi {
+            let unlocked_domi_balance = client.get_balance(&unlocked_domi_source)?;
+            if unlocked_domi_balance < total_unlocked_domi {
                 return Err(Error::InsufficientFunds(
                     vec![FundingSource::SystemAccount].into(),
-                    lamports_to_dom(total_unlocked_dom).to_string(),
+                    lamports_to_dom(total_unlocked_domi).to_string(),
                 ));
             }
         }

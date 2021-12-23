@@ -12,7 +12,7 @@ use {
     domino_transaction_status::parse_token::spl_token_instruction,
     spl_associated_token_account::{create_associated_token_account, get_associated_token_address},
     spl_token::{
-        domino_program::program_pack::Pack,
+        solana_program::program_pack::Pack,
         state::{Account as SplTokenAccount, Mint},
     },
 };

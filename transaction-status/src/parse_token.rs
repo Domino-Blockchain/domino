@@ -10,7 +10,7 @@ use {
     },
     spl_token::{
         instruction::{AuthorityType, TokenInstruction},
-        domino_program::{
+        solana_program::{
             instruction::Instruction as SplTokenInstruction, program_option::COption,
         },
     },

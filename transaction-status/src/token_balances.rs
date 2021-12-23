@@ -9,7 +9,7 @@ use {
     domino_runtime::{bank::Bank, transaction_batch::TransactionBatch},
     domino_sdk::{account::ReadableAccount, pubkey::Pubkey},
     spl_token::{
-        domino_program::program_pack::Pack,
+        solana_program::program_pack::Pack,
         state::{Account as TokenAccount, Mint},
     },
     std::collections::HashMap,
