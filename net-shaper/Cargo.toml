@@ -15,7 +15,7 @@ serde = "1.0.131"
 serde_json = "1.0.73"
 domino-clap-utils = { path = "../clap-utils", version = "=1.10.0" }
 domino-logger = { path = "../logger", version = "=1.10.0" }
-rand = "0.7.0"
+rand = "0.8.4"
 
 [[bin]]
 name = "domino-net-shaper"
