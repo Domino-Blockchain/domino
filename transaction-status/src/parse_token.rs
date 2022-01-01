@@ -461,7 +461,7 @@ mod test {
         domino_sdk::instruction::CompiledInstruction,
         spl_token::{
             instruction::*,
-            domino_program::{
+            solana_program::{
                 instruction::CompiledInstruction as SplTokenCompiledInstruction, message::Message,
                 pubkey::Pubkey as SplTokenPubkey,
             },
