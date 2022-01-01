@@ -1303,15 +1303,15 @@ mod tests {
 
         assert_eq!(
             read_allocations(&input_csv, None, true, true).unwrap(),
-            vec![allocation_dom.clone()]
+            vec![allocation_domi.clone()]
         );
         assert_eq!(
             read_allocations(&input_csv, None, false, false).unwrap(),
-            vec![allocation_dom.clone()]
+            vec![allocation_domi.clone()]
         );
         assert_eq!(
             read_allocations(&input_csv, None, true, false).unwrap(),
-            vec![allocation_dom]
+            vec![allocation_domi]
         );
     }
 
@@ -1631,7 +1631,7 @@ mod tests {
                 sources,
                 vec![FundingSource::SystemAccount, FundingSource::FeePayer].into()
             );
-            assert_eq!(amount, (allocation_amount + fees_in_dom).to_string());
+            assert_eq!(amount, (allocation_amount + fees_in_domi).to_string());
         } else {
             panic!("check_payer_balances should have errored");
         }
@@ -1670,7 +1670,7 @@ mod tests {
                 sources,
                 vec![FundingSource::SystemAccount, FundingSource::FeePayer].into()
             );
-            assert_eq!(amount, (allocation_amount + fees_in_dom).to_string());
+            assert_eq!(amount, (allocation_amount + fees_in_domi).to_string());
         } else {
             panic!("check_payer_balances should have errored");
         }
@@ -1749,7 +1749,7 @@ mod tests {
                 .unwrap_err();
         if let Error::InsufficientFunds(sources, amount) = err_result {
             assert_eq!(sources, vec![FundingSource::FeePayer].into());
-            assert_eq!(amount, fees_in_dom.to_string());
+            assert_eq!(amount, fees_in_domi.to_string());
         } else {
             panic!("check_payer_balances should have errored");
         }
@@ -1878,7 +1878,7 @@ mod tests {
                 sources,
                 vec![FundingSource::SystemAccount, FundingSource::FeePayer].into()
             );
-            assert_eq!(amount, (unlocked_domi + fees_in_dom).to_string());
+            assert_eq!(amount, (unlocked_domi + fees_in_domi).to_string());
         } else {
             panic!("check_payer_balances should have errored");
         }
@@ -1917,7 +1917,7 @@ mod tests {
                 sources,
                 vec![FundingSource::SystemAccount, FundingSource::FeePayer].into()
             );
-            assert_eq!(amount, (unlocked_domi + fees_in_dom).to_string());
+            assert_eq!(amount, (unlocked_domi + fees_in_domi).to_string());
         } else {
             panic!("check_payer_balances should have errored");
         }
@@ -2003,7 +2003,7 @@ mod tests {
                 .unwrap_err();
         if let Error::InsufficientFunds(sources, amount) = err_result {
             assert_eq!(sources, vec![FundingSource::FeePayer].into());
-            assert_eq!(amount, fees_in_dom.to_string());
+            assert_eq!(amount, fees_in_domi.to_string());
         } else {
             panic!("check_payer_balances should have errored");
         }
