@@ -276,7 +276,7 @@ fn main() {
                 .long("faucet-domi")
                 .takes_value(true)
                 .value_name("DOMI")
-                .default_value(default_faucet_dom.as_str())
+                .default_value(default_faucet_domi.as_str())
                 .help(
                     "Give the faucet address this much DOMI in genesis. \
                      If the ledger already exists then this parameter is silently ignored",
