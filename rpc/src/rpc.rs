@@ -78,7 +78,7 @@ use {
     },
     domino_vote_program::vote_state::{VoteState, MAX_LOCKOUT_HISTORY},
     spl_token::{
-        domino_program::program_pack::Pack,
+        solana_program::program_pack::Pack,
         state::{Account as TokenAccount, Mint},
     },
     std::{
@@ -4341,7 +4341,7 @@ pub mod tests {
             vote_state::{BlockTimestamp, Vote, VoteInit, VoteStateVersions, MAX_LOCKOUT_HISTORY},
         },
         spl_token::{
-            domino_program::{program_option::COption, pubkey::Pubkey as SplTokenPubkey},
+            solana_program::{program_option::COption, pubkey::Pubkey as SplTokenPubkey},
             state::{AccountState as TokenAccountState, Mint},
         },
         std::collections::HashMap,
