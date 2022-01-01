@@ -151,7 +151,7 @@ where
                         .help("Keypair to fund accounts"),
                 )
                 .arg(
-                    Arg::with_name("unlocked_dom")
+                    Arg::with_name("unlocked_domi")
                         .default_value("1.0")
                         .long("unlocked-domi")
                         .takes_value(true)
@@ -231,7 +231,7 @@ where
                         .help("Stake Account Address"),
                 )
                 .arg(
-                    Arg::with_name("unlocked_dom")
+                    Arg::with_name("unlocked_domi")
                         .default_value("1.0")
                         .long("unlocked-domi")
                         .takes_value(true)
@@ -472,7 +472,7 @@ fn parse_create_stake_args(
         .transpose()?;
 
     let stake_args = StakeArgs {
-        unlocked_dom: dom_to_lamports(value_t_or_exit!(matches, "unlocked_dom", f64)),
+        unlocked_domi: dom_to_lamports(value_t_or_exit!(matches, "unlocked_domi", f64)),
         lockup_authority,
         sender_stake_args: None,
     };
@@ -555,7 +555,7 @@ fn parse_distribute_stake_args(
         lockup_authority,
     };
     let stake_args = StakeArgs {
-        unlocked_dom: dom_to_lamports(value_t_or_exit!(matches, "unlocked_dom", f64)),
+        unlocked_domi: dom_to_lamports(value_t_or_exit!(matches, "unlocked_domi", f64)),
         lockup_authority: lockup_authority_address,
         sender_stake_args: Some(sender_stake_args),
     };

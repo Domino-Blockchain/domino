@@ -666,7 +666,7 @@ pub mod test {
         domino_sdk::{native_token::dom_to_lamports, poh_config::PohConfig},
         domino_test_validator::TestValidator,
         spl_token::{
-            domino_program::program_pack::Pack,
+            solana_program::program_pack::Pack,
             state::{Account, Mint},
         },
     };

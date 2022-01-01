@@ -198,7 +198,7 @@ fn distribution_instructions(
 
         // Stake args provided, so create a recipient stake account.
         Some(stake_args) => {
-            let unlocked_domi = stake_args.unlocked_dom;
+            let unlocked_domi = stake_args.unlocked_domi;
             let sender_pubkey = args.sender_keypair.pubkey();
             let recipient = allocation.recipient.parse().unwrap();
 
@@ -746,7 +746,7 @@ fn check_payer_balances(
         .sum();
 
     let (distribution_source, unlocked_domi_source) = if let Some(stake_args) = &args.stake_args {
-        let total_unlocked_domi = allocations.len() as u64 * stake_args.unlocked_dom;
+        let total_unlocked_domi = allocations.len() as u64 * stake_args.unlocked_domi;
         undistributed_tokens -= total_unlocked_domi;
         let from_pubkey = if let Some(sender_stake_args) = &stake_args.sender_stake_args {
             sender_stake_args.stake_account_address
@@ -1023,7 +1023,7 @@ pub fn test_process_create_stake_with_client(client: &RpcClient, sender_keypair:
 
     let stake_args = StakeArgs {
         lockup_authority: None,
-        unlocked_dom: dom_to_lamports(1.0),
+        unlocked_domi: dom_to_lamports(1.0),
         sender_stake_args: None,
     };
     let args = DistributeTokensArgs {
@@ -1150,7 +1150,7 @@ pub fn test_process_distribute_stake_with_client(client: &RpcClient, sender_keyp
         lockup_authority: None,
     };
     let stake_args = StakeArgs {
-        unlocked_dom: dom_to_lamports(1.0),
+        unlocked_domi: dom_to_lamports(1.0),
         lockup_authority: None,
         sender_stake_args: Some(sender_stake_args),
     };
@@ -1517,7 +1517,7 @@ mod tests {
         };
         let stake_args = StakeArgs {
             lockup_authority: Some(lockup_authority_address),
-            unlocked_dom: dom_to_lamports(1.0),
+            unlocked_domi: dom_to_lamports(1.0),
             sender_stake_args: Some(sender_stake_args),
         };
         let args = DistributeTokensArgs {
@@ -1757,7 +1757,7 @@ mod tests {
 
     fn initialize_stake_account(
         stake_account_amount: u64,
-        unlocked_dom: u64,
+        unlocked_domi: u64,
         sender_keypair: &Keypair,
         client: &RpcClient,
     ) -> StakeArgs {
@@ -1795,7 +1795,7 @@ mod tests {
 
         StakeArgs {
             lockup_authority: None,
-            unlocked_dom,
+            unlocked_domi,
             sender_stake_args: Some(sender_stake_args),
         }
     }
@@ -1821,7 +1821,7 @@ mod tests {
         let unlocked_domi = 1.0;
         let stake_args = initialize_stake_account(
             dom_to_lamports(allocation_amount),
-            dom_to_lamports(unlocked_dom),
+            dom_to_lamports(unlocked_domi),
             &alice,
             &client,
         );
@@ -1853,7 +1853,7 @@ mod tests {
             assert_eq!(sources, vec![FundingSource::StakeAccount].into());
             assert_eq!(
                 amount,
-                (expensive_allocation_amount - unlocked_dom).to_string()
+                (expensive_allocation_amount - unlocked_domi).to_string()
             );
         } else {
             panic!("check_payer_balances should have errored");
@@ -1894,7 +1894,7 @@ mod tests {
         .unwrap();
         let transaction = transfer(
             &client,
-            dom_to_lamports(unlocked_dom),
+            dom_to_lamports(unlocked_domi),
             &alice,
             &partially_funded_payer.pubkey(),
         )
@@ -1945,7 +1945,7 @@ mod tests {
         let unlocked_domi = 1.0;
         let stake_args = initialize_stake_account(
             dom_to_lamports(allocation_amount),
-            dom_to_lamports(unlocked_dom),
+            dom_to_lamports(unlocked_domi),
             &alice,
             &client,
         );
@@ -1955,7 +1955,7 @@ mod tests {
         write_keypair_file(&funded_payer, &funded_payer_keypair_file).unwrap();
         let transaction = transfer(
             &client,
-            dom_to_lamports(unlocked_dom),
+            dom_to_lamports(unlocked_domi),
             &alice,
             &funded_payer.pubkey(),
         )
@@ -1987,7 +1987,7 @@ mod tests {
                 .unwrap_err();
         if let Error::InsufficientFunds(sources, amount) = err_result {
             assert_eq!(sources, vec![FundingSource::SystemAccount].into());
-            assert_eq!(amount, unlocked_dom.to_string());
+            assert_eq!(amount, unlocked_domi.to_string());
         } else {
             panic!("check_payer_balances should have errored");
         }
