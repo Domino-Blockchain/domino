@@ -952,8 +952,8 @@ impl Shredder {
 
     pub fn try_recovery(
         shreds: Vec<Shred>,
-    ) -> std::result::Result<Vec<Shred>, reed_domomon_erasure::Error> {
-        use reed_domomon_erasure::Error::InvalidIndex;
+    ) -> std::result::Result<Vec<Shred>, reed_solomon_erasure::Error> {
+        use reed_solomon_erasure::Error::InvalidIndex;
         Self::verify_consistent_shred_payload_sizes("try_recovery()", &shreds)?;
         let (slot, fec_set_index) = match shreds.first() {
             None => return Ok(Vec::default()),
@@ -1015,8 +1015,8 @@ impl Shredder {
     }
 
     /// Combines all shreds to recreate the original buffer
-    pub fn deshred(shreds: &[Shred]) -> std::result::Result<Vec<u8>, reed_domomon_erasure::Error> {
-        use reed_domomon_erasure::Error::TooFewDataShards;
+    pub fn deshred(shreds: &[Shred]) -> std::result::Result<Vec<u8>, reed_solomon_erasure::Error> {
+        use reed_solomon_erasure::Error::TooFewDataShards;
         const SHRED_DATA_OFFSET: usize = SIZE_OF_COMMON_SHRED_HEADER + SIZE_OF_DATA_SHRED_HEADER;
         Self::verify_consistent_shred_payload_sizes("deshred()", shreds)?;
         let index = shreds.first().ok_or(TooFewDataShards)?.index();
@@ -1051,9 +1051,9 @@ impl Shredder {
     fn verify_consistent_shred_payload_sizes(
         caller: &str,
         shreds: &[Shred],
-    ) -> std::result::Result<(), reed_domomon_erasure::Error> {
+    ) -> std::result::Result<(), reed_solomon_erasure::Error> {
         if shreds.is_empty() {
-            return Err(reed_domomon_erasure::Error::TooFewShardsPresent);
+            return Err(reed_solomon_erasure::Error::TooFewShardsPresent);
         }
         let slot = shreds[0].slot();
         for shred in shreds {
@@ -1065,7 +1065,7 @@ impl Shredder {
                     SHRED_PAYLOAD_SIZE,
                     shred.payload.len()
                 );
-                return Err(reed_domomon_erasure::Error::IncorrectShardSize);
+                return Err(reed_solomon_erasure::Error::IncorrectShardSize);
             }
         }
 
@@ -1612,7 +1612,7 @@ pub mod tests {
         assert_eq!(shreds.len(), 3);
         assert_matches!(
             Shredder::deshred(&shreds),
-            Err(reed_domomon_erasure::Error::TooFewDataShards)
+            Err(reed_solomon_erasure::Error::TooFewDataShards)
         );
 
         // Test5: Try recovery/reassembly with non zero index full slot with 3 missing data shreds
