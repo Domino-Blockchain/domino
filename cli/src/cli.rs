@@ -369,6 +369,10 @@ pub enum CliCommand {
         memo: Option<String>,
         fee_payer: SignerIndex,
     },
+
+    //participation key
+    AddPartkey,
+
     // Wallet Commands
     Address,
     Airdrop {
@@ -854,6 +858,10 @@ pub fn parse_command(
         ("close-vote-account", Some(matches)) => {
             parse_close_vote_account(matches, default_signer, wallet_manager)
         }
+
+        //partkey Commands
+        ("addpartkey", Some(matches)) => parse_addPartKey(matches,default_signer, wallet_manager),
+
         // Wallet Commands
         ("account", Some(matches)) => parse_account(matches, wallet_manager),
         ("address", Some(matches)) => Ok(CliCommandInfo {
@@ -1571,6 +1579,12 @@ pub fn process_command(config: &CliConfig) -> ProcessResult {
             memo.as_ref(),
             *fee_payer,
         ),
+
+        // Partkey Commands
+        CliCommand::AddPartkey => {
+            process_genPartKey(config)
+        }
+        
 
         // Wallet Commands
 

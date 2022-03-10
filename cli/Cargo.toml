@@ -45,6 +45,12 @@ domino-vote-program = { path = "../programs/vote", version = "=1.10.0" }
 spl-memo = { version = "=3.0.1", features = ["no-entrypoint"] }
 thiserror = "1.0.30"
 tiny-bip39 = "0.8.2"
+bip32 = "0.2.2"
+rand_core = { version = "0.6", features = ["std"] }
+
+[dependencies.rusqlite]
+version = "0.26.0"
+features = ["bundled"]
 
 [dev-dependencies]
 domino-streamer = { path = "../streamer", version = "=1.10.0" }
