@@ -51,11 +51,11 @@ impl PartkeySubCommands for App<'_, '_> {
                 .about("Generates a Participation key")
                 .alias("addpartkey"),           
         )
-        // .subcommand(
-        //         SubCommand::with_name("listpartkeys")
-        //         .about("Get List of participation key")
-        //         .alias("listpartkeys"),
-        //     )
+        .subcommand(
+            SubCommand::with_name("listpartkeys")
+                .about("Get List of participation key")
+                .alias("listpartkeys"),
+        )
         // .subcommand(
         //     SubCommand::with_name("getpartkey")
         //         .about("Fetch a Participation key")
@@ -109,4 +109,38 @@ pub fn process_genPartKey(config: &CliConfig) -> ProcessResult {
     )?;
         println!("Participation Key is generated : {}",child_xpub_str);
     Ok(child_xpub_str)
+}
+
+pub fn parse_listpartkey(
+    matches: &ArgMatches<'_>,
+    default_signer: &DefaultSigner,
+    wallet_manager: &mut Option<Arc<RemoteWalletManager>>,
+) -> Result<CliCommandInfo, CliError> {
+    let pubkey = pubkey_of_signer(matches, "pubkey", wallet_manager)?;
+    let signers = if pubkey.is_some() {
+        vec![]
+    } else {
+        vec![default_signer.signer_from_path(matches, wallet_manager)?]
+    };
+    Ok(CliCommandInfo {
+        command: CliCommand::ListPartKeys,
+        signers,
+    })
+}
+
+pub fn process_listpartkeys()-> ProcessResult {
+    let conn = Connection::open("partkeyDB.db")?;
+    let mut stmt = conn.prepare("SELECT userPubKey, userPartKey FROM partKeys")?;
+
+    let person_iter = stmt.query_map([], |row| {
+        Ok(key_details {
+            pubkey: row.get(0)?,
+            partkey: row.get(1)?,
+        })
+    })?;
+
+    for person in person_iter {
+        println!("{:?}", person.unwrap());
+    }
+    Ok(String::from(""))
 }

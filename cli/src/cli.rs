@@ -372,6 +372,7 @@ pub enum CliCommand {
 
     //participation key
     AddPartkey,
+    ListPartKeys
 
     // Wallet Commands
     Address,
@@ -861,6 +862,7 @@ pub fn parse_command(
 
         //partkey Commands
         ("addpartkey", Some(matches)) => parse_addPartKey(matches,default_signer, wallet_manager),
+        ("listpartkeys",Some(matches)) => parse_listpartkey(matches,default_signer,wallet_manager),
 
         // Wallet Commands
         ("account", Some(matches)) => parse_account(matches, wallet_manager),
@@ -1584,8 +1586,11 @@ pub fn process_command(config: &CliConfig) -> ProcessResult {
         CliCommand::AddPartkey => {
             process_genPartKey(config)
         }
-        
 
+        CliCommand::ListPartKeys => {
+            process_listpartkeys()
+        }
+     
         // Wallet Commands
 
         // Request an airdrop from Domino Faucet;
