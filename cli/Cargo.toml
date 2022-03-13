@@ -47,6 +47,8 @@ thiserror = "1.0.30"
 tiny-bip39 = "0.8.2"
 bip32 = "0.2.2"
 rand_core = { version = "0.6", features = ["std"] }
+hex = "0.4.3"
+uuid = "0.8.2"
 
 [dependencies.rusqlite]
 version = "0.26.0"

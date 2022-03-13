@@ -11,14 +11,14 @@ use crate::{
     nonce::check_nonce_account,
     spend_utils::{resolve_spend_tx_and_check_account_balances, SpendAmount},
 };
-use analog_clap_utils::{
+use domino_clap_utils::{
     input_parsers::*,
     keypair::{DefaultSigner, SignerIndex},
 };
-use analog_remote_wallet::remote_wallet::RemoteWalletManager;
+use domino_remote_wallet::remote_wallet::RemoteWalletManager;
 use std::{fmt::Write as FmtWrite, fs::File, io::Write, sync::Arc};
 use clap::{value_t_or_exit, App, Arg, ArgMatches, SubCommand};
-use analog_sdk::{
+use domino_sdk::{
     pubkey::Pubkey,
 };
 use std::any::Any;
@@ -56,11 +56,7 @@ impl PartkeySubCommands for App<'_, '_> {
                 .about("Get List of participation key")
                 .alias("listpartkeys"),
         )
-        // .subcommand(
-        //     SubCommand::with_name("getpartkey")
-        //         .about("Fetch a Participation key")
-        //         .alias("getpartkey"),
-        // )
+    
     }
 }
 

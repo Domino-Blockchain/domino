@@ -1,7 +1,7 @@
 use {
     crate::{
         clap_app::*, cluster_query::*, feature::*, inflation::*, nonce::*, program::*,
-        spend_utils::*, stake::*, validator_info::*, vote::*, wallet::*,
+        spend_utils::*, stake::*, validator_info::*, vote::*, wallet::*, partkey::*,
     },
     clap::{crate_description, crate_name, value_t_or_exit, ArgMatches, Shell},
     log::*,
@@ -372,7 +372,7 @@ pub enum CliCommand {
 
     //participation key
     AddPartkey,
-    ListPartKeys
+    ListPartKeys,
 
     // Wallet Commands
     Address,
@@ -861,7 +861,7 @@ pub fn parse_command(
         }
 
         //partkey Commands
-        ("addpartkey", Some(matches)) => parse_addPartKey(matches,default_signer, wallet_manager),
+        ("addpartkey", Some(matches)) => parse_addPartKey(matches, default_signer, wallet_manager),
         ("listpartkeys",Some(matches)) => parse_listpartkey(matches,default_signer,wallet_manager),
 
         // Wallet Commands

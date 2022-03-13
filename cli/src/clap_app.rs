@@ -1,7 +1,7 @@
 use {
     crate::{
         cli::*, cluster_query::*, feature::*, inflation::*, nonce::*, program::*, stake::*,
-        validator_info::*, vote::*, wallet::*,
+        validator_info::*, vote::*, wallet::*, partkey::*,
     },
     clap::{App, AppSettings, Arg, ArgGroup, SubCommand},
     domino_clap_utils::{self, input_validators::*, keypair::*},
@@ -134,6 +134,7 @@ pub fn get_clap_app<'ab, 'v>(name: &str, about: &'ab str, version: &'v str) -> A
         .validator_info_subcommands()
         .vote_subcommands()
         .wallet_subcommands()
+        .partkey_subcommands()
         .subcommand(
             SubCommand::with_name("config")
                 .about("Domino command-line tool configuration settings")

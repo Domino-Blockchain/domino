@@ -4,6 +4,8 @@
 /domino-metrics/
 /domino-metrics.tar.bz2
 /target/
+partkeyDB.db
+
 
 **/*.rs.bk
 .cargo
