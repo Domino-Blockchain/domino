@@ -48,13 +48,18 @@ impl PartkeySubCommands for App<'_, '_> {
     fn partkey_subcommands(self) -> Self {
         self.subcommand(
             SubCommand::with_name("addpartkey")
-                .about("Generates a Participation key")
+                .about("Generates a Verification key")
                 .alias("addpartkey"),           
         )
         .subcommand(
             SubCommand::with_name("listpartkeys")
-                .about("Get List of participation key")
+                .about("Get List of all Verification key")
                 .alias("listpartkeys"),
+        )
+        .subcommand(
+            SubCommand::with_name("getpartkey")
+                .about("Fetch a Verification key")
+                .alias("getpartkey"),
         )
     
     }
@@ -104,7 +109,7 @@ pub fn process_genPartKey(config: &CliConfig) -> ProcessResult {
         params![uuid.to_string() ,pubkey.to_string() ,child_xpub_str ,0 , 0],
     )?;
         println!("Participation Key is generated : {}",child_xpub_str);
-    Ok(child_xpub_str)
+    Ok(String::from(""))
 }
 
 pub fn parse_listpartkey(
@@ -139,4 +144,41 @@ pub fn process_listpartkeys()-> ProcessResult {
         println!("{:?}", person.unwrap());
     }
     Ok(String::from(""))
+}
+
+pub fn process_getPartKey(config: &CliConfig) -> ProcessResult{
+    let pubkey = config.pubkey()?;
+    let conn = Connection::open("partkeyDB.db")?;
+    let mut stmt = conn.prepare("SELECT uuid ,userPubKey, userPartKey ,firstround ,lastround FROM partKeys WHERE userPubKey=:pubkey;")?;
+    let person_iter = stmt.query_map(&[(":pubkey",pubkey.to_string().as_str())], |row|  {
+        Ok(Details {
+            uuid: row.get(0)?,
+            pubkey: row.get(1)?,
+            partkey: row.get(2)?,
+            firstround: row.get(3)?,
+            lastround: row.get(4)?,
+        })
+    })?;
+
+    for person in person_iter {
+        println!("{:?}", person.unwrap());
+    }
+    Ok(String::from(""))
+}
+
+pub fn parse_getPartKey(
+    matches: &ArgMatches<'_>,
+    default_signer: &DefaultSigner,
+    wallet_manager: &mut Option<Arc<RemoteWalletManager>>,
+) -> Result<CliCommandInfo, CliError> {
+    let pubkey = pubkey_of_signer(matches, "pubkey", wallet_manager)?;
+    let signers = if pubkey.is_some() {
+        vec![]
+    } else {
+        vec![default_signer.signer_from_path(matches, wallet_manager)?]
+    };
+    Ok(CliCommandInfo {
+        command: CliCommand::GetPartkey{},
+        signers,
+    })
 }

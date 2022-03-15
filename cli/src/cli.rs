@@ -373,6 +373,7 @@ pub enum CliCommand {
     //participation key
     AddPartkey,
     ListPartKeys,
+    GetPartkey,
 
     // Wallet Commands
     Address,
@@ -863,6 +864,7 @@ pub fn parse_command(
         //partkey Commands
         ("addpartkey", Some(matches)) => parse_addPartKey(matches, default_signer, wallet_manager),
         ("listpartkeys",Some(matches)) => parse_listpartkey(matches,default_signer,wallet_manager),
+        ("getpartkey", Some(matches)) => parse_getPartKey(matches,default_signer, wallet_manager),
 
         // Wallet Commands
         ("account", Some(matches)) => parse_account(matches, wallet_manager),
@@ -1589,6 +1591,10 @@ pub fn process_command(config: &CliConfig) -> ProcessResult {
 
         CliCommand::ListPartKeys => {
             process_listpartkeys()
+        }
+
+        CliCommand::GetPartkey => {
+            process_getPartKey(config)
         }
      
         // Wallet Commands
