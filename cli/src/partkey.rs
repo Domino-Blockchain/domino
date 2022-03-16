@@ -14,7 +14,9 @@ use crate::{
 use domino_clap_utils::{
     input_parsers::*,
     keypair::{DefaultSigner, SignerIndex},
+    input_validators::is_valid_pubkey,
 };
+
 use domino_remote_wallet::remote_wallet::RemoteWalletManager;
 use std::{fmt::Write as FmtWrite, fs::File, io::Write, sync::Arc};
 use clap::{value_t_or_exit, App, Arg, ArgMatches, SubCommand};
@@ -49,7 +51,14 @@ impl PartkeySubCommands for App<'_, '_> {
         self.subcommand(
             SubCommand::with_name("addpartkey")
                 .about("Generates a Verification key")
-                .alias("addpartkey"),           
+                .alias("addpartkey")
+                .arg(
+                    pubkey!(Arg::with_name("account_pubkey")
+                        .index(1)
+                        .value_name("ACCOUNT_ADDRESS")
+                        .required(true),
+                        "Account key URI. ")
+                ),           
         )
         .subcommand(
             SubCommand::with_name("listpartkeys")
@@ -59,7 +68,14 @@ impl PartkeySubCommands for App<'_, '_> {
         .subcommand(
             SubCommand::with_name("getpartkey")
                 .about("Fetch a Verification key")
-                .alias("getpartkey"),
+                .alias("getpartkey")
+                .arg(
+                    pubkey!(Arg::with_name("account_pubkey")
+                        .index(1)
+                        .value_name("ACCOUNT_ADDRESS")
+                        .required(true),
+                        "Account key URI. ")
+                ),
         )
     
     }
@@ -67,25 +83,27 @@ impl PartkeySubCommands for App<'_, '_> {
 
 pub fn parse_addPartKey(
     matches: &ArgMatches<'_>,
-    default_signer: &DefaultSigner,
     wallet_manager: &mut Option<Arc<RemoteWalletManager>>,
 ) -> Result<CliCommandInfo, CliError> {
-    let pubkey = pubkey_of_signer(matches, "pubkey", wallet_manager)?;
-    let signers = if pubkey.is_some() {
-        vec![]
-    } else {
-        vec![default_signer.signer_from_path(matches, wallet_manager)?]
-    };
+    // let pubkey = pubkey_of_signer(matches, "pubkey", wallet_manager)?;
+    let account_pubkey = pubkey_of_signer(matches, "account_pubkey", wallet_manager)?.unwrap();
+    // let signers = if account_pubkey.is_some() {
+    //     vec![]
+    // } else {
+    //     vec![default_signer.signer_from_path(matches, wallet_manager)?]
+    // };
     Ok(CliCommandInfo {
-        command: CliCommand::AddPartkey,
-        signers,
+        command: CliCommand::AddPartkey{
+            pubkey: account_pubkey,
+        },
+        signers: vec![],
     })
 }
 
 // pub fn process_genPartKey(/** pubkey: &Option<Pubkey>, **/config: &CliConfig) -> ProcessResult {
-pub fn process_genPartKey(config: &CliConfig) -> ProcessResult {
+pub fn process_genPartKey(account_pubkey: &Pubkey) -> ProcessResult {
 
-    let pubkey = config.pubkey()?;
+    let pubkey = account_pubkey.to_string();
 
     // create a new randomly generated mnemonic phrase
     let mnemonic = Mnemonic::random(&mut OsRng, Default::default());
@@ -146,8 +164,8 @@ pub fn process_listpartkeys()-> ProcessResult {
     Ok(String::from(""))
 }
 
-pub fn process_getPartKey(config: &CliConfig) -> ProcessResult{
-    let pubkey = config.pubkey()?;
+pub fn process_getPartKey(account_pubkey: &Pubkey) -> ProcessResult{
+    let pubkey = account_pubkey.to_string();
     let conn = Connection::open("partkeyDB.db")?;
     let mut stmt = conn.prepare("SELECT uuid ,userPubKey, userPartKey ,firstround ,lastround FROM partKeys WHERE userPubKey=:pubkey;")?;
     let person_iter = stmt.query_map(&[(":pubkey",pubkey.to_string().as_str())], |row|  {
@@ -168,17 +186,16 @@ pub fn process_getPartKey(config: &CliConfig) -> ProcessResult{
 
 pub fn parse_getPartKey(
     matches: &ArgMatches<'_>,
-    default_signer: &DefaultSigner,
     wallet_manager: &mut Option<Arc<RemoteWalletManager>>,
 ) -> Result<CliCommandInfo, CliError> {
-    let pubkey = pubkey_of_signer(matches, "pubkey", wallet_manager)?;
-    let signers = if pubkey.is_some() {
-        vec![]
-    } else {
-        vec![default_signer.signer_from_path(matches, wallet_manager)?]
-    };
+    let account_pubkey = pubkey_of_signer(matches, "account_pubkey", wallet_manager)?.unwrap();
+    // let signers = if pubkey.is_some() {
+    //     vec![]
+    // } else {
+    //     vec![default_signer.signer_from_path(matches, wallet_manager)?]
+    // };
     Ok(CliCommandInfo {
-        command: CliCommand::GetPartkey{},
-        signers,
+        command: CliCommand::GetPartkey{pubkey: account_pubkey},
+        signers: vec![],
     })
 }
