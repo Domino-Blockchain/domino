@@ -228,7 +228,7 @@ impl domino_sdk::program_stubs::SyscallStubs for SyscallStubs {
 
     fn dom_invoke_signed(
         &self,
-        instruction: &Instruction,
+z        instruction: &Instruction,
         account_infos: &[AccountInfo],
         signers_seeds: &[&[&[u8]]],
     ) -> ProgramResult {
