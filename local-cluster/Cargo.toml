@@ -15,7 +15,7 @@ itertools = "0.10.3"
 gag = "1.0.0"
 fs_extra = "1.2.0"
 log = "0.4.14"
-rand = "0.7.0"
+rand = "0.8.4"
 rayon = "1.5.1"
 domino-config-program = { path = "../programs/config", version = "=1.10.0" }
 domino-core = { path = "../core", version = "=1.10.0" }

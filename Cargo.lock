@@ -1221,7 +1221,7 @@ dependencies = [
  "domino-transaction-status",
  "domino-version",
  "log 0.4.14",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rayon",
  "spl-token",
 ]
@@ -1330,7 +1330,7 @@ dependencies = [
  "domino-streamer",
  "domino-version",
  "log 0.4.14",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rayon",
 ]
 
@@ -1425,7 +1425,7 @@ dependencies = [
  "domino-sdk",
  "libsecp256k1",
  "log 0.4.14",
- "rand 0.7.3",
+ "rand 0.8.4",
  "regex",
  "solana_rbpf",
  "thiserror",
@@ -1441,7 +1441,7 @@ dependencies = [
  "fs_extra",
  "log 0.4.14",
  "memmap2",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rayon",
  "tempfile",
 ]
@@ -1689,7 +1689,7 @@ dependencies = [
  "log 0.4.14",
  "lru",
  "matches",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rand_chacha 0.2.2",
  "raptorq",
  "rayon",
@@ -1725,7 +1725,7 @@ dependencies = [
  "domino-streamer",
  "domino-version",
  "log 0.4.14",
- "rand 0.7.3",
+ "rand 0.8.4",
 ]
 
 [[package]]
@@ -1756,7 +1756,7 @@ dependencies = [
  "domino-sdk",
  "log 0.4.14",
  "matches",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rayon",
  "serde",
 ]
@@ -1873,7 +1873,7 @@ dependencies = [
  "matches",
  "num-traits",
  "num_cpus",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rand_chacha 0.2.2",
  "rayon",
  "rustc_version 0.4.0",
@@ -1969,7 +1969,7 @@ dependencies = [
  "num-traits",
  "num_cpus",
  "prost",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rand_chacha 0.2.2",
  "rayon",
  "reed-solomon-erasure",
@@ -2044,7 +2044,7 @@ dependencies = [
  "gag",
  "itertools",
  "log 0.4.14",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rayon",
  "serial_test",
  "tempfile",
@@ -2111,7 +2111,7 @@ dependencies = [
  "gethostname",
  "lazy_static",
  "log 0.4.14",
- "rand 0.7.3",
+ "rand 0.8.4",
  "reqwest",
  "serial_test",
 ]
@@ -2123,7 +2123,7 @@ dependencies = [
  "clap 2.33.3",
  "domino-clap-utils",
  "domino-logger",
- "rand 0.7.3",
+ "rand 0.8.4",
  "serde",
  "serde_json",
 ]
@@ -2139,7 +2139,7 @@ dependencies = [
  "domino-version",
  "log 0.4.14",
  "nix",
- "rand 0.7.3",
+ "rand 0.8.4",
  "serde",
  "serde_derive",
  "socket2",
@@ -2175,7 +2175,7 @@ dependencies = [
  "log 0.4.14",
  "matches",
  "nix",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rayon",
  "serde",
 ]
@@ -2198,7 +2198,7 @@ dependencies = [
  "domino-sys-tuner",
  "log 0.4.14",
  "matches",
- "rand 0.7.3",
+ "rand 0.8.4",
  "thiserror",
 ]
 
@@ -2214,7 +2214,7 @@ dependencies = [
  "domino-sdk",
  "domino-version",
  "log 0.4.14",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rayon",
 ]
 
@@ -2372,7 +2372,7 @@ dependencies = [
  "domino-validator",
  "domino-version",
  "log 0.4.14",
- "rand 0.7.3",
+ "rand 0.8.4",
  "serial_test",
  "tempfile",
  "tonic-build",
@@ -2495,7 +2495,7 @@ dependencies = [
  "num-traits",
  "num_cpus",
  "ouroboros",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rayon",
  "regex",
  "rustc_version 0.4.0",
@@ -2542,7 +2542,7 @@ dependencies = [
  "num-traits",
  "pbkdf2 0.10.0",
  "qstring",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rand_chacha 0.2.2",
  "rustc_version 0.4.0",
  "rustversion",
@@ -2771,7 +2771,7 @@ dependencies = [
  "domino-transaction-status",
  "domino-version",
  "log 0.4.14",
- "rand 0.7.3",
+ "rand 0.8.4",
  "rayon",
 ]
 
@@ -2850,7 +2850,7 @@ dependencies = [
  "libc",
  "log 0.4.14",
  "num_cpus",
- "rand 0.7.3",
+ "rand 0.8.4",
  "signal-hook",
  "symlink",
  "sysctl",
